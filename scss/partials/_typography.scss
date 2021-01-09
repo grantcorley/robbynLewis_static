@@ -20,7 +20,6 @@ body{
 h1, h2{
 	color: $secondary;
 	font-weight: bold;
-	//font-family: 'Archivo Black', sans-serif;
 	font-family: 'eastmangrotesque-extrabold';
 	letter-spacing: 0;
 }
@@ -29,9 +28,26 @@ h3{
 	color: $secondary;
 	font-weight: bold;
 	font-size:1.4rem;
-	font-family: 'eastmangrotesque-extrabold';
+}	
+
+.center{
+	text-align: center;
 }
+
 
 .punch{
 	color:#329c43;
+}
+
+.pull-quote{
+	text-align: center;
+	color:$primary;
+	padding-bottom:.25em;
+
+	.quote-pop{
+		// color:$secondary;
+		// font-size:2em;
+	}
+
+
 }

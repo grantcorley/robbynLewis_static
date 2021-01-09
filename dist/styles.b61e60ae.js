@@ -195,7 +195,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"normalize.css":"node_modules/normalize.css/normalize.css","./../fonts/eastmangrotesque-extrabold-webfont.woff2":[["eastmangrotesque-extrabold-webfont.f383fa13.woff2","fonts/eastmangrotesque-extrabold-webfont.woff2"],"fonts/eastmangrotesque-extrabold-webfont.woff2"],"./../fonts/eastmangrotesque-extrabold-webfont.woff":[["eastmangrotesque-extrabold-webfont.1508da0f.woff","fonts/eastmangrotesque-extrabold-webfont.woff"],"fonts/eastmangrotesque-extrabold-webfont.woff"],"./../images/robbyn_alley_MOBILE.jpg":[["robbyn_alley_MOBILE.c2f38217.jpg","images/robbyn_alley_MOBILE.jpg"],"images/robbyn_alley_MOBILE.jpg"],"./../images/robbyn_alley_TABLET.jpg":[["robbyn_alley_TABLET.af6f9a23.jpg","images/robbyn_alley_TABLET.jpg"],"images/robbyn_alley_TABLET.jpg"],"./../images/robbyn_alley_DISPLAY.jpg":[["robbyn_alley_DISPLAY.ef570fa2.jpg","images/robbyn_alley_DISPLAY.jpg"],"images/robbyn_alley_DISPLAY.jpg"],"./../images/curtisBay.jpg":[["curtisBay.bbd7b7d1.jpg","images/curtisBay.jpg"],"images/curtisBay.jpg"],"./../images/robbyn_linwood.jpg":[["robbyn_linwood.1af1c734.jpg","images/robbyn_linwood.jpg"],"images/robbyn_linwood.jpg"],"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"normalize.css":"node_modules/normalize.css/normalize.css","./../fonts/eastmangrotesque-extrabold-webfont.woff2":[["eastmangrotesque-extrabold-webfont.f383fa13.woff2","fonts/eastmangrotesque-extrabold-webfont.woff2"],"fonts/eastmangrotesque-extrabold-webfont.woff2"],"./../fonts/eastmangrotesque-extrabold-webfont.woff":[["eastmangrotesque-extrabold-webfont.1508da0f.woff","fonts/eastmangrotesque-extrabold-webfont.woff"],"fonts/eastmangrotesque-extrabold-webfont.woff"],"./../images/robbyn_alley_MOBILE.jpg":[["robbyn_alley_MOBILE.c2f38217.jpg","images/robbyn_alley_MOBILE.jpg"],"images/robbyn_alley_MOBILE.jpg"],"./../images/curtisBay.jpg":[["curtisBay.bbd7b7d1.jpg","images/curtisBay.jpg"],"images/curtisBay.jpg"],"./../images/robbyn_linwood.jpg":[["robbyn_linwood.1af1c734.jpg","images/robbyn_linwood.jpg"],"images/robbyn_linwood.jpg"],"./../images/federalHillDoors.jpg":[["federalHillDoors.746afcb4.jpg","images/federalHillDoors.jpg"],"images/federalHillDoors.jpg"],"./../images/robbyn_alley_TABLET.jpg":[["robbyn_alley_TABLET.af6f9a23.jpg","images/robbyn_alley_TABLET.jpg"],"images/robbyn_alley_TABLET.jpg"],"./../images/robbyn_alley_DISPLAY.jpg":[["robbyn_alley_DISPLAY.ef570fa2.jpg","images/robbyn_alley_DISPLAY.jpg"],"images/robbyn_alley_DISPLAY.jpg"],"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -223,7 +223,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58926" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56727" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

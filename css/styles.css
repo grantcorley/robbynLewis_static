@@ -17,11 +17,18 @@ h1, h2 {
 h3 {
   color: #337dc0;
   font-weight: bold;
-  font-size: 1.4rem;
-  font-family: 'eastmangrotesque-extrabold'; }
+  font-size: 1.4rem; }
+
+.center {
+  text-align: center; }
 
 .punch {
   color: #329c43; }
+
+.pull-quote {
+  text-align: center;
+  color: #171243;
+  padding-bottom: .25em; }
 
 header {
   background-color: #171243;
@@ -78,6 +85,15 @@ footer {
 #main .hero {
   background-image: url("../images/robbyn_alley_MOBILE.jpg");
   height: 300px; }
+
+.parallax_01 {
+  background-image: url("../images/curtisBay.jpg"); }
+
+.parallax_02 {
+  background-image: url("../images/robbyn_linwood.jpg"); }
+
+.parallax_03 {
+  background-image: url("../images/federalHillDoors.jpg"); }
 
 @media (min-width: 768px) {
   #main .hero {
@@ -179,10 +195,6 @@ html.home article {
       background-repeat: no-repeat;
       background-size: cover;
       margin: 0; }
-    #main .sectionHeader .parallax_01 {
-      background-image: url("../images/curtisBay.jpg"); }
-    #main .sectionHeader .parallax_02 {
-      background-image: url("../images/robbyn_linwood.jpg"); }
     #main .sectionHeader h2.header {
       position: absolute;
       z-index: 1000;
@@ -193,6 +205,36 @@ html.home article {
       width: 100%;
       font-size: 2.6em; }
 
+.by-the-numbers {
+  padding-top: 2em;
+  text-align: center;
+  border-top: 1px solid #cdcdcd; }
+  .by-the-numbers h3 {
+    color: gray;
+    letter-spacing: .14rem;
+    margin-bottom: 2em; }
+    .by-the-numbers h3 .punch {
+      color: #337dc0; }
+  .by-the-numbers .col-sm {
+    text-align: center; }
+    .by-the-numbers .col-sm img {
+      width: 30%;
+      height: auto; }
+    .by-the-numbers .col-sm p.stat {
+      color: #337dc0;
+      font-family: 'eastmangrotesque-extrabold', sans-serif;
+      font-size: 4em;
+      margin-bottom: -.4em;
+      padding-bottom: 0; }
+
+section.contact p {
+  text-align: center; }
+section.contact .col-sm {
+  padding-top: 1em;
+  text-align: center; }
+  section.contact .col-sm img {
+    padding-bottom: 1em; }
+
 /*-----------============= BREAKPOINTS ===============------------ */
 @media (min-width: 768px) {
   #main .hero h2 {
@@ -202,7 +244,10 @@ html.home article {
     top: 250px; }
   #main .grabber h2 {
     font-size: 3em;
-    line-height: .95em; }
+    line-height: .95em;
+    margin-bottom: .35em; }
+  #main .grabber p {
+    padding-bottom: 1em; }
   #main .section-divider {
     margin-bottom: 2em;
     position: relative;
@@ -257,7 +302,8 @@ html.home article {
     margin-top: 2em; }
     #main .grabber h2 {
       font-size: 4.6em;
-      line-height: 1em; }
+      line-height: 1em;
+      margin-bottom: .25em; }
     #main .grabber p {
       font-size: 1.36em; }
   #main section {

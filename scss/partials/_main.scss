@@ -169,13 +169,8 @@ html.home{
 	}
 
 	
-	.parallax_01{
-		background-image: url('../images/curtisBay.jpg');
-	}
 
-	.parallax_02{
-		background-image: url('../images/robbyn_linwood.jpg');
-	}
+
 
 
 		h2.header{
@@ -193,16 +188,73 @@ html.home{
 
 
 
-  // .parallax {
-  //       background-attachment: scroll;
-  //   }
-
 
 }//end sectionHeader ---------------
 
 
 }
 
+
+.by-the-numbers{
+	
+	padding-top:2em;
+	text-align: center;
+	border-top:1px solid #cdcdcd;
+
+
+	h3{
+		color:gray;
+		letter-spacing: .14rem;
+		margin-bottom: 2em;
+
+		.punch{
+			color: $secondary;
+		}
+
+	}
+
+	.col-sm{
+		text-align: center;
+		// border:1px dotted gray;
+
+		
+			img{
+				width:30%;
+				height:auto;
+			}
+
+
+			p.stat{
+				color:$secondary;
+				font-family: 'eastmangrotesque-extrabold', sans-serif;
+				font-size: 4em;
+				margin-bottom:-.4em;
+				padding-bottom:0;
+			}
+
+
+	}
+}
+
+
+section.contact{
+	p{
+		text-align: center;
+	}
+
+
+
+	.col-sm{
+		padding-top:1em;
+		text-align: center;
+
+		img{
+			padding-bottom:1em;
+		}
+
+	}
+
+}
 
 
 /*-----------============= BREAKPOINTS ===============------------ */
@@ -235,6 +287,12 @@ html.home{
 			h2{
 				font-size: 3em;
 				line-height: .95em;
+				margin-bottom: .35em;
+
+			}
+
+			p{
+				padding-bottom:1em;
 			}
 		}
 
@@ -287,6 +345,7 @@ html.home{
 			h2{
 				font-size:6em;
 				top:160px;
+
 			}
 
 			.buttons{
@@ -366,6 +425,7 @@ html.home{
 			h2{
 				font-size: 4.6em;
 				line-height: 1em;
+				margin-bottom: .25em;
 			}
 
 			p{
