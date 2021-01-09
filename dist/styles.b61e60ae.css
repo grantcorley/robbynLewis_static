@@ -436,13 +436,13 @@ footer {
   height: 300px; }
 
 .parallax_01 {
-  background-image: url("/curtisBay.bbd7b7d1.jpg"); }
+  background-image: url("/curtisBay_MOBILE.e417ce0a.jpg"); }
 
 .parallax_02 {
-  background-image: url("/robbyn_linwood.1af1c734.jpg"); }
+  background-image: url("/robbyn_linwood_MOBILE.985a6d39.jpg"); }
 
 .parallax_03 {
-  background-image: url("/federalHillDoors.746afcb4.jpg"); }
+  background-image: url("/federalHillDoors_MOBILE.0b2631bf.jpg"); }
 
 @media (min-width: 768px) {
   #main .hero {
@@ -451,7 +451,16 @@ footer {
 @media (min-width: 1200px) {
   #main .hero {
     background-image: url("/robbyn_alley_DISPLAY.ef570fa2.jpg");
-    height: 650px !important; } }
+    height: 650px !important; }
+
+  .parallax_01 {
+    background-image: url("/curtisBay_DISPLAY.aaec2209.jpg"); }
+
+  .parallax_02 {
+    background-image: url("/robbyn_linwood_DISPLAY.9a66624c.jpg"); }
+
+  .parallax_03 {
+    background-image: url("/federalHillDoors_DISPLAY.f9a5f61c.jpg"); } }
 body {
   background-color: #171243; }
 
@@ -471,49 +480,50 @@ html.home article {
     background-size: cover;
     margin: 0;
     margin-bottom: 1em; }
-    #main .hero h2 {
-      color: white;
+    #main .hero .lockup {
       position: absolute;
-      top: 110px;
+      bottom: 5%;
       left: 0;
-      width: 100%;
-      margin: 0;
-      font-size: 2em;
-      line-height: 1em;
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-      display: inline-block; }
-    #main .hero .buttons {
-      position: absolute;
-      width: 100%;
-      top: 190px;
-      display: flex;
-      justify-content: center; }
-      #main .hero .buttons a.button {
-        margin-right: 1em;
-        text-transform: uppercase;
+      width: 100%; }
+      #main .hero .lockup h2 {
         color: white;
-        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-        font-weight: bold;
-        padding: .5em 1em;
-        border-radius: 5px; }
-        #main .hero .buttons a.button:link, #main .hero .buttons a.button:visited {
+        width: 100%;
+        margin: 0;
+        margin-bottom: .5em;
+        font-size: 2em;
+        line-height: 1em;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        display: inline-block; }
+      #main .hero .lockup .buttons {
+        width: 100%;
+        display: flex;
+        justify-content: center; }
+        #main .hero .lockup .buttons a.button {
+          margin-right: 1em;
+          text-transform: uppercase;
           color: white;
-          text-decoration: none; }
-        #main .hero .buttons a.button:hover, #main .hero .buttons a.button:active {
-          color: white;
-          text-decoration: none; }
-      #main .hero .buttons a.button.join:link, #main .hero .buttons a.button.join:visited {
-        background-color: #337dc0; }
-      #main .hero .buttons a.button.join:hover {
-        background-color: #408acc; }
-      #main .hero .buttons a.button.join:active {
-        background-color: #2e70ac; }
-      #main .hero .buttons a.button.donate:link, #main .hero .buttons a.button.donate:visited {
-        background-color: #329c43; }
-      #main .hero .buttons a.button.donate:hover {
-        background-color: #38af4b; }
-      #main .hero .buttons a.button.donate:active {
-        background-color: #2c893b; }
+          box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+          font-weight: bold;
+          padding: .5em 1em;
+          border-radius: 5px; }
+          #main .hero .lockup .buttons a.button:link, #main .hero .lockup .buttons a.button:visited {
+            color: white;
+            text-decoration: none; }
+          #main .hero .lockup .buttons a.button:hover, #main .hero .lockup .buttons a.button:active {
+            color: white;
+            text-decoration: none; }
+        #main .hero .lockup .buttons a.button.join:link, #main .hero .lockup .buttons a.button.join:visited {
+          background-color: #337dc0; }
+        #main .hero .lockup .buttons a.button.join:hover {
+          background-color: #408acc; }
+        #main .hero .lockup .buttons a.button.join:active {
+          background-color: #2e70ac; }
+        #main .hero .lockup .buttons a.button.donate:link, #main .hero .lockup .buttons a.button.donate:visited {
+          background-color: #329c43; }
+        #main .hero .lockup .buttons a.button.donate:hover {
+          background-color: #38af4b; }
+        #main .hero .lockup .buttons a.button.donate:active {
+          background-color: #2c893b; }
   #main .grabber {
     text-align: center; }
   #main section {
@@ -536,7 +546,8 @@ html.home article {
   #main .sectionHeader {
     width: 100%;
     position: relative;
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    border-bottom: 3px solid #337dc0; }
     #main .sectionHeader .parallax {
       height: 300px;
       background-attachment: fixed;
@@ -567,7 +578,7 @@ html.home article {
   .by-the-numbers .col-sm {
     text-align: center; }
     .by-the-numbers .col-sm img {
-      width: 30%;
+      width: 16%;
       height: auto; }
     .by-the-numbers .col-sm p.stat {
       color: #337dc0;
@@ -575,6 +586,8 @@ html.home article {
       font-size: 4em;
       margin-bottom: -.4em;
       padding-bottom: 0; }
+    .by-the-numbers .col-sm p.achievement {
+      padding-bottom: 1.85em; }
 
 section.contact p {
   text-align: center; }
@@ -586,11 +599,13 @@ section.contact .col-sm {
 
 /*-----------============= BREAKPOINTS ===============------------ */
 @media (min-width: 768px) {
-  #main .hero h2 {
-    font-size: 3.4em;
-    top: 110px; }
-  #main .hero .buttons {
-    top: 250px; }
+  #main .hero .lockup {
+    bottom: 30px; }
+    #main .hero .lockup h2 {
+      font-size: 3.6em;
+      margin-bottom: .25em; }
+    #main .hero .lockup .buttons {
+      top: 250px; }
   #main .grabber h2 {
     font-size: 3em;
     line-height: .95em;
@@ -609,44 +624,80 @@ section.contact .col-sm {
       transform: translate(-50%, -50%);
       color: white;
       text-transform: uppercase;
-      font-size: 3.6em; } }
-@media (min-width: 1200px) {
-  #main .hero h2 {
-    font-size: 6em;
-    top: 160px; }
-  #main .hero .buttons {
-    position: absolute;
+      font-size: 3.6em; }
+  #main .sectionHeader {
     width: 100%;
-    top: 380px;
-    display: flex;
-    justify-content: center; }
-    #main .hero .buttons a.button {
-      margin-right: 1em;
-      text-transform: uppercase;
-      color: white;
-      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-      font-weight: bold;
-      padding: .5em 1em;
-      border-radius: 5px;
-      font-size: 1.4em; }
-      #main .hero .buttons a.button:link, #main .hero .buttons a.button:visited {
+    position: relative;
+    margin-bottom: 1em; }
+    #main .sectionHeader .parallax {
+      height: 360px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0; }
+    #main .sectionHeader h2.header {
+      position: absolute;
+      top: 144px;
+      font-size: 2.6em; }
+
+  .by-the-numbers {
+    padding-top: 2em;
+    text-align: center;
+    border-top: 1px solid #cdcdcd; }
+    .by-the-numbers h3 {
+      color: gray;
+      letter-spacing: .14rem;
+      margin-bottom: 2em; }
+      .by-the-numbers h3 .punch {
+        color: #337dc0; }
+    .by-the-numbers .col-sm {
+      text-align: center; }
+      .by-the-numbers .col-sm img {
+        width: 30%;
+        height: auto; }
+      .by-the-numbers .col-sm p.stat {
+        color: #337dc0;
+        font-family: 'eastmangrotesque-extrabold', sans-serif;
+        font-size: 4em;
+        margin-bottom: -.4em;
+        padding-bottom: 0; } }
+@media (min-width: 1200px) {
+  #main .hero .lockup {
+    bottom: 36px; }
+    #main .hero .lockup h2 {
+      font-size: 6em; }
+    #main .hero .lockup .buttons {
+      width: 100%;
+      display: flex;
+      justify-content: center; }
+      #main .hero .lockup .buttons a.button {
+        margin-right: 1em;
+        text-transform: uppercase;
         color: white;
-        text-decoration: none; }
-      #main .hero .buttons a.button:hover, #main .hero .buttons a.button:active {
-        color: white;
-        text-decoration: none; }
-    #main .hero .buttons a.button.join:link, #main .hero .buttons a.button.join:visited {
-      background-color: #337dc0; }
-    #main .hero .buttons a.button.join:hover {
-      background-color: #408acc; }
-    #main .hero .buttons a.button.join:active {
-      background-color: #2e70ac; }
-    #main .hero .buttons a.button.donate:link, #main .hero .buttons a.button.donate:visited {
-      background-color: #329c43; }
-    #main .hero .buttons a.button.donate:hover {
-      background-color: #38af4b; }
-    #main .hero .buttons a.button.donate:active {
-      background-color: #2c893b; }
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+        padding: .5em 1em;
+        border-radius: 5px;
+        font-size: 1.4em; }
+        #main .hero .lockup .buttons a.button:link, #main .hero .lockup .buttons a.button:visited {
+          color: white;
+          text-decoration: none; }
+        #main .hero .lockup .buttons a.button:hover, #main .hero .lockup .buttons a.button:active {
+          color: white;
+          text-decoration: none; }
+      #main .hero .lockup .buttons a.button.join:link, #main .hero .lockup .buttons a.button.join:visited {
+        background-color: #337dc0; }
+      #main .hero .lockup .buttons a.button.join:hover {
+        background-color: #408acc; }
+      #main .hero .lockup .buttons a.button.join:active {
+        background-color: #2e70ac; }
+      #main .hero .lockup .buttons a.button.donate:link, #main .hero .lockup .buttons a.button.donate:visited {
+        background-color: #329c43; }
+      #main .hero .lockup .buttons a.button.donate:hover {
+        background-color: #38af4b; }
+      #main .hero .lockup .buttons a.button.donate:active {
+        background-color: #2c893b; }
   #main .grabber {
     margin-top: 2em; }
     #main .grabber h2 {
@@ -660,8 +711,47 @@ section.contact .col-sm {
     #main section h2 {
       font-size: 3em;
       margin-bottom: .65em; }
+  #main .sectionHeader {
+    width: 100%;
+    position: relative;
+    margin-bottom: 1em; }
+    #main .sectionHeader .parallax {
+      height: 436px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0; }
+    #main .sectionHeader h2.header {
+      position: absolute;
+      top: 164px;
+      font-size: 3.6em; }
   #main .section-divider {
-    margin-bottom: 3em; } }
+    margin-bottom: 3em; }
+
+  .by-the-numbers {
+    padding-top: 2em;
+    text-align: center;
+    border-top: 1px solid #cdcdcd; }
+    .by-the-numbers h3 {
+      color: gray;
+      letter-spacing: .14rem;
+      margin-bottom: 2em; }
+      .by-the-numbers h3 .punch {
+        color: #337dc0; }
+    .by-the-numbers .col-sm {
+      text-align: center; }
+      .by-the-numbers .col-sm img {
+        width: 32%;
+        height: auto; }
+      .by-the-numbers .col-sm p.stat {
+        color: #337dc0;
+        font-family: 'eastmangrotesque-extrabold', sans-serif;
+        font-size: 4em;
+        margin-bottom: -.4em;
+        padding-bottom: 0; }
+      .by-the-numbers .col-sm p.achievement {
+        padding-bottom: 0; } }
 
 
 

@@ -1,39 +1,76 @@
 //_images.scss
 
 
-//MOBILE SIZES
+//DEFAULT/MOBILE SIZES-----------------------------------------------
 #main .hero { 
 	background-image: url('../images/robbyn_alley_MOBILE.jpg'); 
 	height:300px;
 }
 
 .parallax_01{
-	background-image: url('../images/curtisBay.jpg');
+	background-image: url('../images/curtisBay_MOBILE.jpg');
+	
 }
 
 .parallax_02{
-	background-image: url('../images/robbyn_linwood.jpg');
+	background-image: url('../images/robbyn_linwood_MOBILE.jpg');
 }
 
 .parallax_03{
-	background-image: url('../images/federalHillDoors.jpg');
+	background-image: url('../images/federalHillDoors_MOBILE.jpg');
 }
 
 
 
-//TABLET SIZES
+
+
+
+//TABLET SIZES-----------------------------------------------
 @media (min-width: $tablet) { 
+	
+	//MAIN HERO
 	#main .hero { 
 		background-image: url('../images/robbyn_alley_TABLET.jpg'); 
 		height:350px;
 	}
+
+// 	.parallax_01{
+// 	background-image: url('../images/curtisBay_TABLET.jpg');
+// }
+
+// 	.parallax_02{
+// 		background-image: url('../images/robbyn_linwood_TABLET.jpg');
+// 	}
+
+// 	.parallax_03{
+// 		background-image: url('../images/federalHillDoors_TABLET.jpg');
+// 	}
+
 }
 
 
-//DISPLAY SIZES
+
+
+
+
+//DISPLAY SIZES-----------------------------------------------
 @media (min-width: $display) { 
+	
 	#main .hero { 
 		background-image: url('../images/robbyn_alley_DISPLAY.jpg'); 
 		height:650px !important;
 	}
+
+	.parallax_01{
+			background-image: url('../images/curtisBay_DISPLAY.jpg');
+	}
+
+	.parallax_02{
+		background-image: url('../images/robbyn_linwood_DISPLAY.jpg');
+	}
+
+	.parallax_03{
+		background-image: url('../images/federalHillDoors_DISPLAY.jpg');
+	}
+
 }

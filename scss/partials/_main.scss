@@ -29,85 +29,92 @@ html.home{
 	    margin-bottom:1em;
 	    //border:2px solid orange;
 
+	    .lockup{
 
-	    h2{
-	    	color:white;
-	    	position: absolute;
-	    	top: 110px;
-	    	left:0;
-	    	width:100%;
-	    	margin:0;
-	    	font-size:2em;
-	    	line-height: 1em;
-	    	text-shadow: 2px 2px 2px rgba(0,0,0, .2);
-	    	display: inline-block;
-	    }
+	    		position: absolute;
+			    	bottom: 5%;
+			    	left:0;
+			    	// border:1px solid red;
+			    	width:100%;
 
-	
-		.buttons{
-			position: absolute;
-			width:100%;
-			top:190px;
+			    h2{
+			    	color:white;
+			    	
+			    	width:100%;
+			    	margin:0;
+			    	margin-bottom: .5em;
+			    	font-size:2em;
+			    	line-height: 1em;
+			    	text-shadow: 2px 2px 2px rgba(0,0,0, .2);
+			    	display: inline-block;
+			    }
 
-			display: flex;
-			justify-content: center;
+			
+				.buttons{
+					width:100%;
+					display: flex;
+					justify-content: center;
 
-			a.button{
-				margin-right:1em;
-				text-transform: uppercase;
-				color:white;
-				box-shadow: 2px 2px 2px 2px rgba(0,0,0, .2);
-				font-weight: bold;
-				padding: .5em 1em;
-				border-radius: 5px;
+					a.button{
+						margin-right:1em;
+						text-transform: uppercase;
+						color:white;
+						box-shadow: 2px 2px 2px 2px rgba(0,0,0, .2);
+						font-weight: bold;
+						padding: .5em 1em;
+						border-radius: 5px;
 
-				&:link, &:visited{
-					color: white;
-					text-decoration: none;
-				}
+						&:link, &:visited{
+							color: white;
+							text-decoration: none;
+						}
 
-				&:hover, &:active{
-					color: white;
-					text-decoration: none;
-				}
+						&:hover, &:active{
+							color: white;
+							text-decoration: none;
+						}
 
-			}
+					}
 
-			a.button.join{
-				
+					a.button.join{
+						
 
-				&:link, &:visited{
-					background-color: $secondary;
-				}
+						&:link, &:visited{
+							background-color: $secondary;
+						}
 
-				&:hover{
-					background-color: lighten($secondary, 5%);
-				}
+						&:hover{
+							background-color: lighten($secondary, 5%);
+						}
 
-				&:active{
-					background-color: darken($secondary, 5%);
-				}
+						&:active{
+							background-color: darken($secondary, 5%);
+						}
 
-			}
+					}
 
-			a.button.donate{
-				
+					a.button.donate{
+						
 
-				&:link, &:visited{
-					background-color: #329c43;
-				}
+						&:link, &:visited{
+							background-color: #329c43;
+						}
 
-				&:hover{
-					background-color: lighten(#329c43, 5%);
-				}
+						&:hover{
+							background-color: lighten(#329c43, 5%);
+						}
 
-				&:active{
-					background-color: darken(#329c43, 5%);
-				}
+						&:active{
+							background-color: darken(#329c43, 5%);
+						}
 
-			}
+					}
 
-		}
+				}//end buttons
+
+
+		}//end lockup
+
 
 	} //end hero
 
@@ -138,6 +145,7 @@ html.home{
 		position:relative;
 		text-align: center;
 		color:white;
+		// border:1px solid red;
 
 		h2{
 			position:absolute;
@@ -156,6 +164,8 @@ html.home{
 		width:100%;
 		position:relative;
 		margin-bottom:2em;
+		//border-top:3px solid $secondary;
+		border-bottom:3px solid $secondary;
 		
 
 	.parallax{
@@ -167,10 +177,6 @@ html.home{
 	    background-size: cover;
 	    margin: 0;
 	}
-
-	
-
-
 
 
 		h2.header{
@@ -219,7 +225,7 @@ html.home{
 
 		
 			img{
-				width:30%;
+				width:16%;
 				height:auto;
 			}
 
@@ -232,9 +238,13 @@ html.home{
 				padding-bottom:0;
 			}
 
+			p.achievement{
+				padding-bottom:1.85em;
+			}
+
 
 	}
-}
+} //end by-the-numbers
 
 
 section.contact{
@@ -271,14 +281,21 @@ section.contact{
 
 		.hero{
 			
+
+			.lockup{
+
+				bottom:30px;
+
 			h2{
-				font-size:3.4em;
-				top:110px;
+				font-size:3.6em;
+				margin-bottom: .25em;
 			}
 
 			.buttons{
 				top:250px;
 			}
+
+			}//end lockup
 
 		}
 		
@@ -316,13 +333,88 @@ section.contact{
 	}
 
 
-	
+	.sectionHeader{  //----------------------
+		
+		width:100%;
+		position:relative;
+		margin-bottom:1em;
+		
+		
+
+	.parallax{
+	    height:360px;
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    margin: 0;
+	}
+
+
+		h2.header{
+		  position: absolute;
+		  top: 144px;
+		  font-size: 2.6em;
+
+		}
+
+
+}//end sectionHeader ---------------
 
 
 
 	}//main
 
- }
+
+ .by-the-numbers{
+	
+	padding-top:2em;
+	text-align: center;
+	border-top:1px solid #cdcdcd;
+
+
+	h3{
+		color:gray;
+		letter-spacing: .14rem;
+		margin-bottom: 2em;
+
+		.punch{
+			color: $secondary;
+		}
+
+	}
+
+	.col-sm{
+		text-align: center;
+		// border:1px dotted gray;
+
+		
+			img{
+				width:30%;
+				height:auto;
+			}
+
+
+			p.stat{
+				color:$secondary;
+				font-family: 'eastmangrotesque-extrabold', sans-serif;
+				font-size: 4em;
+				margin-bottom:-.4em;
+				padding-bottom:0;
+			}
+
+		
+
+
+	}
+} //end by-the-numbers
+
+
+
+
+ }//end TABLET media query
+
+
 
 
 
@@ -340,18 +432,22 @@ section.contact{
 	#main{
 		
 		.hero{
-			// background-color:$secondary;
+	
+
+		.lockup{
+
+			bottom:36px;
 
 			h2{
 				font-size:6em;
-				top:160px;
+				
 
 			}
 
 			.buttons{
-			position: absolute;
+			
 			width:100%;
-			top:380px;
+			
 
 			display: flex;
 			justify-content: center;
@@ -415,6 +511,8 @@ section.contact{
 
 		}
 
+		}//end lockup
+
 
 		}
 
@@ -442,12 +540,95 @@ section.contact{
 		}
 	}
 
+
+
+
+	.sectionHeader{  //----------------------
+		
+		width:100%;
+		position:relative;
+		margin-bottom:1em;
+		// border:4px solid green;
+		
+
+	.parallax{
+	    height:436px;
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    margin: 0;
+	}
+
+
+		h2.header{
+		  position: absolute;
+		  top: 164px;
+		  font-size: 3.6em;
+
+		}
+
+
+}//end sectionHeader ---------------
+
+
+
+
 	.section-divider{
 		margin-bottom:3em;
 	}
 
 
 	}//end main
+
+
+ .by-the-numbers{
+	
+	padding-top:2em;
+	text-align: center;
+	border-top:1px solid #cdcdcd;
+
+
+	h3{
+		color:gray;
+		letter-spacing: .14rem;
+		margin-bottom: 2em;
+
+		.punch{
+			color: $secondary;
+		}
+
+	}
+
+	.col-sm{
+		text-align: center;
+		// border:1px dotted gray;
+
+		
+			img{
+				width:32%;
+				height:auto;
+			}
+
+
+			p.stat{
+				color:$secondary;
+				font-family: 'eastmangrotesque-extrabold', sans-serif;
+				font-size: 4em;
+				margin-bottom:-.4em;
+				padding-bottom:0;
+			}
+
+			p.achievement{
+				padding-bottom:0;
+			}
+
+		
+
+
+	}
+} //end by-the-numbers
+
 
  } 
 
