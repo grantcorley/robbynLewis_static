@@ -1,0 +1,36 @@
+//_header.scss
+
+header{
+	background-color: $primary;
+	text-align: center;
+	border-bottom:3px solid $secondary;
+
+
+
+	.logo{
+		max-width: 150px;
+		height:auto;
+		margin: .5em auto;
+	}
+
+}
+
+
+/*----------- BREAKPOINTS ------------ */
+
+@media (min-width: $tablet) { 
+
+	header{
+	background-color: $primary;
+	text-align: center;
+	border-bottom:4px solid $secondary;
+
+	.logo{
+		max-width: 240px;
+		height:auto;
+		margin: .5em auto;
+	}
+
+}
+
+}

@@ -1,0 +1,78 @@
+// _footer.scss
+
+footer{
+
+	padding: 1em 0;
+	text-align: center;
+	border-top: 3px solid $secondary;
+
+	img.logo{
+		width:160px;
+		height:auto;
+		display:block;
+		margin:0 auto 1em auto;
+	}
+
+	p{
+		color:white;
+	}
+
+	a{
+		&:link, &:visited{
+			color: white;
+			text-decoration: none;
+		}
+
+		&:hover, &:active{
+			color: white;
+			text-decoration: underline;
+		}
+
+	}
+
+	p{
+		font-size: .64em;
+	}
+
+	p.auth-line{
+		font-size:.5em;
+	}
+
+	.social-media-links{
+
+		margin-bottom: 2em;
+
+
+		img.social-media-logo{
+			width:24px;
+			height:auto;
+			margin-right:.5em;
+			opacity: .8;
+		}
+
+
+		a{
+			&:link, &:visited{
+				img.social-media-logo{
+			
+					opacity: .8;
+					
+					}
+			}
+
+			&:hover, &:active{
+				img.social-media-logo{
+			
+					opacity: 1;
+					
+					}
+			}
+
+	}
+
+
+
+	}
+
+
+}

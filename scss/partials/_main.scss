@@ -1,0 +1,393 @@
+//_main.scss
+
+body{
+	background-color: $primary;
+	
+}
+
+html.home{
+	article{
+		// border-bottom:1px solid gray;
+		padding-top:1.4em;
+		padding-bottom: 1.4em;
+	}
+}
+
+#main{
+	background-color: white;
+	padding-bottom:6em;
+
+	.hero{
+		
+		position: relative;
+		text-align: center;
+	    background-attachment: scroll;
+	    background-position: top;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    margin: 0;
+	    margin-bottom:1em;
+	    //border:2px solid orange;
+
+
+	    h2{
+	    	color:white;
+	    	position: absolute;
+	    	top: 110px;
+	    	left:0;
+	    	width:100%;
+	    	margin:0;
+	    	font-size:2em;
+	    	line-height: 1em;
+	    	text-shadow: 2px 2px 2px rgba(0,0,0, .2);
+	    	display: inline-block;
+	    }
+
+	
+		.buttons{
+			position: absolute;
+			width:100%;
+			top:190px;
+
+			display: flex;
+			justify-content: center;
+
+			a.button{
+				margin-right:1em;
+				text-transform: uppercase;
+				color:white;
+				box-shadow: 2px 2px 2px 2px rgba(0,0,0, .2);
+				font-weight: bold;
+				padding: .5em 1em;
+				border-radius: 5px;
+
+				&:link, &:visited{
+					color: white;
+					text-decoration: none;
+				}
+
+				&:hover, &:active{
+					color: white;
+					text-decoration: none;
+				}
+
+			}
+
+			a.button.join{
+				
+
+				&:link, &:visited{
+					background-color: $secondary;
+				}
+
+				&:hover{
+					background-color: lighten($secondary, 5%);
+				}
+
+				&:active{
+					background-color: darken($secondary, 5%);
+				}
+
+			}
+
+			a.button.donate{
+				
+
+				&:link, &:visited{
+					background-color: #329c43;
+				}
+
+				&:hover{
+					background-color: lighten(#329c43, 5%);
+				}
+
+				&:active{
+					background-color: darken(#329c43, 5%);
+				}
+
+			}
+
+		}
+
+	} //end hero
+
+
+	.grabber{
+		text-align: center;
+		h2{
+			// text-transform: uppercase;
+		}
+
+		p{
+			// color:gray;
+			// font-family: Georgia, serif;
+		}
+		
+	}
+
+
+	section{
+		margin-top:2.4em;
+		h2{
+			margin-bottom:.65em;
+		}
+	}
+
+	.section-divider{
+		margin-bottom:2em;
+		position:relative;
+		text-align: center;
+		color:white;
+
+		h2{
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform: translate(-50%, -50%);
+			color:white;
+			text-transform: uppercase;
+			font-size:2.4em;
+		}
+
+	}
+
+	.sectionHeader{  //----------------------
+		
+		width:100%;
+		position:relative;
+		margin-bottom:2em;
+		
+
+	.parallax{
+	    // min-height: 550px; 
+	    height:300px;
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    margin: 0;
+	}
+
+	
+	.parallax_01{
+		background-image: url('../images/curtisBay.jpg');
+	}
+
+	.parallax_02{
+		background-image: url('../images/robbyn_linwood.jpg');
+	}
+
+
+		h2.header{
+		  position: absolute;
+		  z-index: 1000;
+		  top: 110px;
+		  color:white;
+		  text-align:center;
+		  display:inline-block;
+		  width:100%;
+		  font-size: 2.6em;
+
+		}
+
+
+
+
+  // .parallax {
+  //       background-attachment: scroll;
+  //   }
+
+
+}//end sectionHeader ---------------
+
+
+}
+
+
+
+/*-----------============= BREAKPOINTS ===============------------ */
+
+@media (min-width: $tablet) { 
+
+
+	html{
+		// border:4px solid green;
+	}
+
+
+	#main{
+
+		.hero{
+			
+			h2{
+				font-size:3.4em;
+				top:110px;
+			}
+
+			.buttons{
+				top:250px;
+			}
+
+		}
+		
+
+		.grabber{
+			h2{
+				font-size: 3em;
+				line-height: .95em;
+			}
+		}
+
+
+	.section-divider{
+		margin-bottom:2em;
+		position:relative;
+		text-align: center;
+		color:white;
+
+		h2{
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform: translate(-50%, -50%);
+			color:white;
+			text-transform: uppercase;
+			font-size:3.6em;
+		}
+
+	}
+
+
+	
+
+
+
+	}//main
+
+ }
+
+
+
+
+
+
+@media (min-width: $display) { 
+
+
+	html{
+		// border:4px solid red;
+	}
+
+
+	#main{
+		
+		.hero{
+			// background-color:$secondary;
+
+			h2{
+				font-size:6em;
+				top:160px;
+			}
+
+			.buttons{
+			position: absolute;
+			width:100%;
+			top:380px;
+
+			display: flex;
+			justify-content: center;
+
+			a.button{
+				margin-right:1em;
+				text-transform: uppercase;
+				color:white;
+				box-shadow: 2px 2px 2px 2px rgba(0,0,0, .2);
+				font-weight: bold;
+				padding: .5em 1em;
+				border-radius: 5px;
+
+				font-size:1.4em;
+
+				&:link, &:visited{
+					color: white;
+					text-decoration: none;
+				}
+
+				&:hover, &:active{
+					color: white;
+					text-decoration: none;
+				}
+
+			}
+
+			a.button.join{
+				
+
+				&:link, &:visited{
+					background-color: $secondary;
+				}
+
+				&:hover{
+					background-color: lighten($secondary, 5%);
+				}
+
+				&:active{
+					background-color: darken($secondary, 5%);
+				}
+
+			}
+
+			a.button.donate{
+				
+
+				&:link, &:visited{
+					background-color: #329c43;
+				}
+
+				&:hover{
+					background-color: lighten(#329c43, 5%);
+				}
+
+				&:active{
+					background-color: darken(#329c43, 5%);
+				}
+
+			}
+
+		}
+
+
+		}
+
+		.grabber{
+
+			margin-top:2em;
+
+			h2{
+				font-size: 4.6em;
+				line-height: 1em;
+			}
+
+			p{
+				font-size: 1.36em;
+			}
+		}
+
+
+	section{
+		margin-top:4em;
+		h2{
+			font-size:3em;
+			margin-bottom:.65em;
+		}
+	}
+
+	.section-divider{
+		margin-bottom:3em;
+	}
+
+
+	}//end main
+
+ } 
+
