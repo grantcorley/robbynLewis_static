@@ -549,8 +549,8 @@ html.home article {
     margin-bottom: 2em;
     border-bottom: 3px solid #337dc0; }
     #main .sectionHeader .parallax {
-      height: 300px;
-      background-attachment: fixed;
+      height: 200px;
+      background-attachment: scroll;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -558,12 +558,12 @@ html.home article {
     #main .sectionHeader h2.header {
       position: absolute;
       z-index: 1000;
-      top: 110px;
+      top: 70px;
       color: white;
       text-align: center;
       display: inline-block;
       width: 100%;
-      font-size: 2.6em; }
+      font-size: 2.4em; }
 
 .by-the-numbers {
   padding-top: 2em;
