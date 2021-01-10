@@ -4,13 +4,52 @@ header{
 	background-color: $primary;
 	text-align: center;
 	border-bottom:3px solid $secondary;
-
+	position: relative;
 
 
 	.logo{
 		max-width: 150px;
 		height:auto;
 		margin: .5em auto;
+	}
+
+	.menu-icon-holder{
+
+		//border:1px dotted orange;
+		width:20%;
+		height: 100%;
+		position: absolute;
+		right:0;
+		top:0;
+		z-index: 1000;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding-right:2em;
+
+			.menu-icon{
+				color:white;
+				cursor:pointer;
+			}
+
+	}
+
+}
+
+
+header.collapsed{
+	border-bottom:none;
+
+	height:60px;
+	width: 100%;
+	position: fixed;
+
+	top:0;
+	left:0;
+	z-index: 2000;
+
+	.logo{
+		display: none;
 	}
 
 }

@@ -33,11 +33,37 @@ h3 {
 header {
   background-color: #171243;
   text-align: center;
-  border-bottom: 3px solid #337dc0; }
+  border-bottom: 3px solid #337dc0;
+  position: relative; }
   header .logo {
     max-width: 150px;
     height: auto;
     margin: .5em auto; }
+  header .menu-icon-holder {
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2em; }
+    header .menu-icon-holder .menu-icon {
+      color: white;
+      cursor: pointer; }
+
+header.collapsed {
+  border-bottom: none;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000; }
+  header.collapsed .logo {
+    display: none; }
 
 /*----------- BREAKPOINTS ------------ */
 @media (min-width: 768px) {
@@ -119,7 +145,7 @@ html.home article {
   padding-top: 1.4em;
   padding-bottom: 1.4em; }
   html.home article .fas {
-    color: #171243;
+    color: #337dc0;
     padding-bottom: .25em; }
 
 #main {
@@ -184,6 +210,9 @@ html.home article {
     margin-top: 2.4em; }
     #main section h2 {
       margin-bottom: .65em; }
+  #main section.issues h3 {
+    padding-bottom: 1em;
+    border-bottom: 1px solid #cdcdcd; }
   #main .section-divider {
     margin-bottom: 2em;
     position: relative;

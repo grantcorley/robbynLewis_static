@@ -117,85 +117,51 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"js/script.js":[function(require,module,exports) {
+//script.js
+//IIFE
+(function () {
+  initialize();
+})(); //------------------
+// const header;
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
 
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
+function initialize() {
+  console.log('initialize()');
+  var header = document.querySelector('header');
+  var menu_icon = document.querySelector('.menu-icon');
+  console.log(header);
+  document.addEventListener('scroll', function (e) {
+    //console.log(window.scrollY);
+    if (window.scrollY > 40) {
+      //if the header is not collapsed
+      if (!header.classList.contains("collapsed")) {
+        collapseHeader();
       }
     }
 
-    cssTimeout = null;
-  }, 50);
-}
+    if (window.scrollY <= 40) {
+      //if the header IS collapsed
+      if (header.classList.contains("collapsed")) {
+        expandHeader();
+      }
+    }
+  });
+  menu_icon.addEventListener("click", function () {
+    alert("menu under construction");
+  });
 
-module.exports = reloadCSS;
-},{"./bundle-url":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/normalize.css/normalize.css":[function(require,module,exports) {
+  function collapseHeader() {
+    //console.log('collapseHeader()');
+    header.classList.add("collapsed");
+  }
 
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-},{"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"css/styles.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"normalize.css":"node_modules/normalize.css/normalize.css","./../fonts/eastmangrotesque-extrabold-webfont.woff2":[["eastmangrotesque-extrabold-webfont.f383fa13.woff2","fonts/eastmangrotesque-extrabold-webfont.woff2"],"fonts/eastmangrotesque-extrabold-webfont.woff2"],"./../fonts/eastmangrotesque-extrabold-webfont.woff":[["eastmangrotesque-extrabold-webfont.1508da0f.woff","fonts/eastmangrotesque-extrabold-webfont.woff"],"fonts/eastmangrotesque-extrabold-webfont.woff"],"./../images/robbyn_alley_MOBILE.jpg":[["robbyn_alley_MOBILE.c2f38217.jpg","images/robbyn_alley_MOBILE.jpg"],"images/robbyn_alley_MOBILE.jpg"],"./../images/curtisBay_MOBILE.jpg":[["curtisBay_MOBILE.e417ce0a.jpg","images/curtisBay_MOBILE.jpg"],"images/curtisBay_MOBILE.jpg"],"./../images/robbyn_linwood_MOBILE.jpg":[["robbyn_linwood_MOBILE.985a6d39.jpg","images/robbyn_linwood_MOBILE.jpg"],"images/robbyn_linwood_MOBILE.jpg"],"./../images/federalHillDoors_MOBILE.jpg":[["federalHillDoors_MOBILE.0b2631bf.jpg","images/federalHillDoors_MOBILE.jpg"],"images/federalHillDoors_MOBILE.jpg"],"./../images/robbyn_alley_TABLET.jpg":[["robbyn_alley_TABLET.af6f9a23.jpg","images/robbyn_alley_TABLET.jpg"],"images/robbyn_alley_TABLET.jpg"],"./../images/robbyn_alley_DISPLAY.jpg":[["robbyn_alley_DISPLAY.ef570fa2.jpg","images/robbyn_alley_DISPLAY.jpg"],"images/robbyn_alley_DISPLAY.jpg"],"./../images/curtisBay_DISPLAY.jpg":[["curtisBay_DISPLAY.aaec2209.jpg","images/curtisBay_DISPLAY.jpg"],"images/curtisBay_DISPLAY.jpg"],"./../images/robbyn_linwood_DISPLAY.jpg":[["robbyn_linwood_DISPLAY.9a66624c.jpg","images/robbyn_linwood_DISPLAY.jpg"],"images/robbyn_linwood_DISPLAY.jpg"],"./../images/federalHillDoors_DISPLAY.jpg":[["federalHillDoors_DISPLAY.f9a5f61c.jpg","images/federalHillDoors_DISPLAY.jpg"],"images/federalHillDoors_DISPLAY.jpg"],"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+  function expandHeader() {
+    //console.log('expandHeader()');
+    header.classList.remove("collapsed");
+  }
+} //end initialize()
+},{}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -399,5 +365,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/styles.b61e60ae.js.map
+},{}]},{},["../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/script.js"], null)
+//# sourceMappingURL=/script.d573be0b.js.map
