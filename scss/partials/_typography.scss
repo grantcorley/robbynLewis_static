@@ -21,13 +21,14 @@ h1, h2{
 	color: $secondary;
 	font-weight: normal;
 	font-family: 'eastmangrotesque-extrabold';
-	letter-spacing: 0;
+	letter-spacing: -.05rem;
 }
 
 h3{
 	color: $secondary;
 	font-weight: normal;
 	font-size:1.4rem;
+	// letter-spacing: -.05rem;
 }	
 
 .center{
