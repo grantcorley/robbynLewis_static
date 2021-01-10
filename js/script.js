@@ -13,9 +13,7 @@ function initialize(){
 	const header = document.querySelector('header');
 	const menu_icon = document.querySelector('.menu-icon');
 
-	menu_icon.classList.remove("hide");
-
-	console.log(header);
+	// menu_icon.classList.remove("hide");
 
 	document.addEventListener('scroll', function(e){
 
@@ -55,8 +53,6 @@ function initialize(){
 		//console.log('expandHeader()');
 		header.classList.remove("collapsed");
 	}
-
-
 
 
 
