@@ -7,9 +7,14 @@ body{
 
 html.home{
 	article{
-		// border-bottom:1px solid gray;
 		padding-top:1.4em;
 		padding-bottom: 1.4em;
+		
+		.fas{
+			color:$primary;
+			padding-bottom:.25em;
+		}
+
 	}
 }
 
@@ -226,7 +231,10 @@ html.home{
 
 	.col-sm{
 		text-align: center;
-		// border:1px dotted gray;
+
+		.fal{
+			color:$secondary;
+		}
 
 		
 			img{
@@ -238,7 +246,7 @@ html.home{
 			p.stat{
 				color:$secondary;
 				font-family: 'eastmangrotesque-extrabold', sans-serif;
-				font-size: 4em;
+				font-size: 2em;
 				margin-bottom:-.4em;
 				padding-bottom:0;
 			}
@@ -253,9 +261,12 @@ html.home{
 
 
 section.contact{
+	
 	p{
 		text-align: center;
 	}
+
+
 
 
 
@@ -263,16 +274,60 @@ section.contact{
 		padding-top:1em;
 		text-align: center;
 
-		img{
-			padding-bottom:1em;
+		a{
+
+				&:link, &:visited{
+					color: $secondary;
+					text-decoration: none;
+				}
+
+				&:hover, &:active{
+					color: lighten($primary, 5%);
+					//color:$primary;
+					text-decoration: none;
+				}
+
+			.social-media-link{
+
+				border:1px solid #cdcdcd;
+				border-radius:1em;
+				padding:1em;
+
+
+
+			.fal, .fab{
+				// color: $secondary;
+				margin-top:.5em;
+				margin-bottom:.35em;
+
+			}
+
 		}
 
+
+		}
+
+		
+	}
+
+
+}
+
+
+h2.pull-quote{
+	color:$secondary;
+
+	span.pop{
+		color:$primary;
 	}
 
 }
 
 
-/*-----------============= BREAKPOINTS ===============------------ */
+
+
+
+/*------------------- ============= BREAKPOINTS =============== ------------ */
 
 @media (min-width: $tablet) { 
 
@@ -403,7 +458,7 @@ section.contact{
 			p.stat{
 				color:$secondary;
 				font-family: 'eastmangrotesque-extrabold', sans-serif;
-				font-size: 4em;
+				font-size: 3em;
 				margin-bottom:-.4em;
 				padding-bottom:0;
 			}

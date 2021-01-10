@@ -16,7 +16,7 @@ h1, h2 {
 
 h3 {
   color: #337dc0;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 1.4rem; }
 
 .center {
@@ -118,6 +118,9 @@ body {
 html.home article {
   padding-top: 1.4em;
   padding-bottom: 1.4em; }
+  html.home article .fas {
+    color: #171243;
+    padding-bottom: .25em; }
 
 #main {
   background-color: white;
@@ -231,13 +234,15 @@ html.home article {
       color: #337dc0; }
   .by-the-numbers .col-sm {
     text-align: center; }
+    .by-the-numbers .col-sm .fal {
+      color: #337dc0; }
     .by-the-numbers .col-sm img {
       width: 16%;
       height: auto; }
     .by-the-numbers .col-sm p.stat {
       color: #337dc0;
       font-family: 'eastmangrotesque-extrabold', sans-serif;
-      font-size: 4em;
+      font-size: 2em;
       margin-bottom: -.4em;
       padding-bottom: 0; }
     .by-the-numbers .col-sm p.achievement {
@@ -248,10 +253,26 @@ section.contact p {
 section.contact .col-sm {
   padding-top: 1em;
   text-align: center; }
-  section.contact .col-sm img {
-    padding-bottom: 1em; }
+  section.contact .col-sm a:link, section.contact .col-sm a:visited {
+    color: #337dc0;
+    text-decoration: none; }
+  section.contact .col-sm a:hover, section.contact .col-sm a:active {
+    color: #1e1757;
+    text-decoration: none; }
+  section.contact .col-sm a .social-media-link {
+    border: 1px solid #cdcdcd;
+    border-radius: 1em;
+    padding: 1em; }
+    section.contact .col-sm a .social-media-link .fal, section.contact .col-sm a .social-media-link .fab {
+      margin-top: .5em;
+      margin-bottom: .35em; }
 
-/*-----------============= BREAKPOINTS ===============------------ */
+h2.pull-quote {
+  color: #337dc0; }
+  h2.pull-quote span.pop {
+    color: #171243; }
+
+/*------------------- ============= BREAKPOINTS =============== ------------ */
 @media (min-width: 768px) {
   #main .hero .lockup {
     bottom: 30px; }
@@ -313,7 +334,7 @@ section.contact .col-sm {
       .by-the-numbers .col-sm p.stat {
         color: #337dc0;
         font-family: 'eastmangrotesque-extrabold', sans-serif;
-        font-size: 4em;
+        font-size: 3em;
         margin-bottom: -.4em;
         padding-bottom: 0; } }
 @media (min-width: 1200px) {
