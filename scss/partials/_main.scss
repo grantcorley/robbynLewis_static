@@ -155,6 +155,7 @@ html.home{
 			color:white;
 			text-transform: uppercase;
 			font-size:2.4em;
+			
 		}
 
 	}
@@ -188,6 +189,10 @@ html.home{
 		  display:inline-block;
 		  width:100%;
 		  font-size: 2.4em;
+		   text-decoration: underline;
+  				text-decoration-color: $secondary;
+  				text-underline-position: under;
+  			// border-bottom: 2px solid $secondary;
 
 		}
 

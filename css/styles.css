@@ -10,13 +10,13 @@ body {
 
 h1, h2 {
   color: #337dc0;
-  font-weight: bold;
+  font-weight: normal;
   font-family: 'eastmangrotesque-extrabold';
   letter-spacing: 0; }
 
 h3 {
   color: #337dc0;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 1.4rem; }
 
 .center {
@@ -214,7 +214,10 @@ html.home article {
       text-align: center;
       display: inline-block;
       width: 100%;
-      font-size: 2.4em; }
+      font-size: 2.4em;
+      text-decoration: underline;
+      text-decoration-color: #337dc0;
+      text-underline-position: under; }
 
 .by-the-numbers {
   padding-top: 2em;
