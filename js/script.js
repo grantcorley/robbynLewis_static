@@ -13,10 +13,11 @@ function initialize(){
 	const header = document.querySelector('header');
 	const menu_icon = document.querySelector('.menu-icon');
 
+	menu_icon.classList.remove("hide");
+
 	console.log(header);
 
 	document.addEventListener('scroll', function(e){
-		//console.log(window.scrollY);
 
 
 		if(window.scrollY > 40){

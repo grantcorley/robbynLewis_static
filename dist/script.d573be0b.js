@@ -130,9 +130,9 @@ function initialize() {
   console.log('initialize()');
   var header = document.querySelector('header');
   var menu_icon = document.querySelector('.menu-icon');
+  menu_icon.classList.remove("hide");
   console.log(header);
   document.addEventListener('scroll', function (e) {
-    //console.log(window.scrollY);
     if (window.scrollY > 40) {
       //if the header is not collapsed
       if (!header.classList.contains("collapsed")) {

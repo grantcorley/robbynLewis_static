@@ -490,6 +490,9 @@ footer {
 body {
   background-color: #171243; }
 
+.hide {
+  display: none; }
+
 html.home article {
   padding-top: 1.4em;
   padding-bottom: 1.4em; }
