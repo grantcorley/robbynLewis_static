@@ -1,4 +1,10 @@
 @import url(normalize.css);
+.disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
 @font-face {
   font-family: 'eastmangrotesque-extrabold';
   src: url("../fonts/eastmangrotesque-extrabold-webfont.woff2") format("woff2"), url("../fonts/eastmangrotesque-extrabold-webfont.woff") format("woff");
@@ -34,11 +40,14 @@ header {
   background-color: #171243;
   text-align: center;
   border-bottom: 3px solid #337dc0;
-  position: relative; }
+  position: relative;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   header .logo {
-    max-width: 150px;
-    height: auto;
-    margin: .5em auto; }
+    max-width: 160px;
+    height: auto; }
   header .menu-icon-holder {
     width: 20%;
     height: 100%;
@@ -72,7 +81,7 @@ header.collapsed {
     text-align: center;
     border-bottom: 4px solid #337dc0; }
     header .logo {
-      max-width: 240px;
+      max-width: 200px;
       height: auto;
       margin: .5em auto; } }
 footer {
@@ -153,7 +162,8 @@ html.home article {
 
 #main {
   background-color: white;
-  padding-bottom: 6em; }
+  padding-bottom: 6em;
+  position: relative; }
   #main .hero {
     position: relative;
     text-align: center;
@@ -459,5 +469,87 @@ h2.pull-quote {
         padding-bottom: 0; }
       .by-the-numbers .col-sm p.achievement {
         padding-bottom: 0; } }
+.menu_visible {
+  display: block !important; }
+
+nav.menu {
+  display: none;
+  z-index: 2000;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 0;
+  background-color: #337dc0;
+  font-family: 'eastmangrotesque-extrabold'; }
+  nav.menu ul {
+    list-style-type: none;
+    text-transform: uppercase;
+    padding-left: 0; }
+    nav.menu ul li {
+      text-align: center;
+      line-height: 2em;
+      border-top: 1px solid #7dafdc;
+      padding: 1em 0; }
+      nav.menu ul li:first-child {
+        border-top: 0; }
+      nav.menu ul li a {
+        font-size: 1.1em;
+        color: white;
+        text-decoration: none; }
+
+/*----------- BREAKPOINTS ------------ */
+@media (min-width: 768px) {
+  nav.menu {
+    z-index: 2000;
+    height: 100%;
+    position: absolute;
+    width: 45%;
+    right: 0;
+    top: 0;
+    background-color: #337dc0;
+    font-family: 'eastmangrotesque-extrabold';
+    box-shadow: -3px 2px 2px 1px rgba(0, 0, 0, 0.4); }
+    nav.menu ul {
+      list-style-type: none;
+      text-transform: uppercase;
+      padding-left: 0; }
+      nav.menu ul li {
+        text-align: center;
+        line-height: 2em;
+        border-top: 1px solid #7dafdc;
+        padding: 1em 0; }
+        nav.menu ul li:first-child {
+          border-top: 0; }
+        nav.menu ul li a {
+          font-size: 1.1em;
+          color: white;
+          text-decoration: none; } }
+@media (min-width: 1200px) {
+  nav.menu {
+    z-index: 2000;
+    height: 100%;
+    position: absolute;
+    width: 30%;
+    right: 0;
+    top: 0;
+    background-color: #337dc0;
+    font-family: 'eastmangrotesque-extrabold';
+    box-shadow: -3px 2px 2px 1px rgba(0, 0, 0, 0.4); }
+    nav.menu ul {
+      list-style-type: none;
+      text-transform: uppercase;
+      padding-left: 0; }
+      nav.menu ul li {
+        text-align: center;
+        line-height: 2em;
+        border-top: 1px solid #7dafdc;
+        padding: 1em 0; }
+        nav.menu ul li:first-child {
+          border-top: 0; }
+        nav.menu ul li a {
+          font-size: 1.1em;
+          color: white;
+          text-decoration: none; } }
 
 /*# sourceMappingURL=styles.css.map */

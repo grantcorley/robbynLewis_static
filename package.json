@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.4.1"
   }
 }

@@ -128,18 +128,19 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
 function initialize() {
   console.log('initialize()');
+  var header_height = 80;
   var header = document.querySelector('header');
   var menu_icon = document.querySelector('.menu-icon'); // menu_icon.classList.remove("hide");
 
   document.addEventListener('scroll', function (e) {
-    if (window.scrollY > 40) {
+    if (window.scrollY > header_height) {
       //if the header is not collapsed
       if (!header.classList.contains("collapsed")) {
         collapseHeader();
       }
     }
 
-    if (window.scrollY <= 40) {
+    if (window.scrollY <= header_height) {
       //if the header IS collapsed
       if (header.classList.contains("collapsed")) {
         expandHeader();
