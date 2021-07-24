@@ -4,7 +4,6 @@
 //------------------
 
 
-// const header;
 
 
 function initialize(){
@@ -16,20 +15,43 @@ function initialize(){
 
 	const nav = document.querySelector('nav.menu');
 
-	var isMenuOpen = false;
+	let isMenuOpen = false;
+
+	let number_scrolls = 0;
+
+	const main = document.querySelector('#main');
+
+	const allSections = main.querySelectorAll('section');
+
+
 
 	window.addEventListener('resize', onWindowResize);
 
 	function onWindowResize(){
-		//console.log("window resize");
 		closeMenu();
 	}
 
+	nav.addEventListener('click', function(){
+		if(isMenuOpen){
+			nav.classList.remove('menu_visible');
+			isMenuOpen = false;
+			number_scrolls++;
+			console.log(`${number_scrolls} scrolls`);
+			// allSections.forEach(element => console.log(element));
+			if(number_scrolls === 1){
+				allSections.forEach(element => element.classList.add('scroll_offset_01'));
+			}
+			if(number_scrolls === 2){
+				allSections.forEach(element => element.classList.remove('scroll_offset_01'));
+				allSections.forEach(element => element.classList.add('scroll_offset_02'));
+			}	
+		}
+	});
 
 
 	document.addEventListener('scroll', function(e){
 
-		console.log(window.scrollY);
+		//console.log(window.scrollY);
 
 		if(window.scrollY > header_height){
 			//if the header is not collapsed

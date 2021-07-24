@@ -5,6 +5,12 @@
   -ms-user-select: none;
   user-select: none; }
 
+.scroll_offset_01 {
+  scroll-margin-top: 140px; }
+
+.scroll_offset_02 {
+  scroll-margin-top: 80px; }
+
 @font-face {
   font-family: 'eastmangrotesque-extrabold';
   src: url("../fonts/eastmangrotesque-extrabold-webfont.woff2") format("woff2"), url("../fonts/eastmangrotesque-extrabold-webfont.woff") format("woff");
@@ -118,7 +124,7 @@ footer {
       opacity: 1; }
 
 #main .hero {
-  background-image: url("../images/robbyn_alley_MOBILE.jpg");
+  background-image: url("../images/hero_01_MOBILE.jpg");
   height: 300px; }
 
 .parallax_01 {
@@ -132,12 +138,12 @@ footer {
 
 @media (min-width: 768px) {
   #main .hero {
-    background-image: url("../images/robbyn_alley_TABLET.jpg");
+    background-image: url("../images/hero_01_TABLET.jpg");
     height: 350px; } }
 @media (min-width: 1200px) {
   #main .hero {
-    background-image: url("../images/robbyn_alley_DISPLAY.jpg");
-    height: 650px !important; }
+    background-image: url("../images/hero_01_DISPLAY.jpg");
+    height: 700px !important; }
 
   .parallax_01 {
     background-image: url("../images/curtisBay_DISPLAY.jpg"); }
@@ -147,6 +153,9 @@ footer {
 
   .parallax_03 {
     background-image: url("../images/federalHillDoors_DISPLAY.jpg"); } }
+html {
+  scroll-behavior: smooth; }
+
 body {
   background-color: #171243; }
 
@@ -220,7 +229,8 @@ html.home article {
   #main .grabber {
     text-align: center; }
   #main section {
-    margin-top: 2.4em; }
+    margin-top: 2.4em;
+    scroll-behavior: smooth; }
     #main section h2 {
       margin-bottom: .65em; }
   #main section.issues h3 {
@@ -527,12 +537,10 @@ nav.menu {
           background-color: #4c91d0; }
         nav.menu ul li a:active {
           background-color: #2e70ac; }
-  nav.menu .social-media-links {
-    border: 2px solid red; }
-    nav.menu .social-media-links a img {
-      max-width: 36px;
-      height: auto;
-      margin: 1em .5em 0 .5em; }
+  nav.menu .social-media-links a img {
+    max-width: 36px;
+    height: auto;
+    margin: 1em .5em 0 .5em; }
 
 /*----------- BREAKPOINTS ------------ */
 @media (min-width: 768px) {

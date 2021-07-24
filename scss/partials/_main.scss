@@ -1,5 +1,9 @@
 //_main.scss
 
+html{
+	scroll-behavior: smooth;
+}
+
 body{
 	background-color: $primary;
 	// position: relative;
@@ -144,7 +148,11 @@ html.home{
 
 
 	section{
+
 		margin-top:2.4em;
+		scroll-behavior: smooth; 
+		//scroll-margin-top: 4em; 
+		
 		h2{
 			margin-bottom:.65em;
 		}

@@ -3,7 +3,7 @@
 
 //DEFAULT/MOBILE SIZES-----------------------------------------------
 #main .hero { 
-	background-image: url('../images/robbyn_alley_MOBILE.jpg'); 
+	background-image: url('../images/hero_01_MOBILE.jpg'); 
 	height:300px;
 }
 
@@ -30,7 +30,7 @@
 	
 	//MAIN HERO
 	#main .hero { 
-		background-image: url('../images/robbyn_alley_TABLET.jpg'); 
+		background-image: url('../images/hero_01_TABLET.jpg'); 
 		height:350px;
 	}
 
@@ -57,8 +57,8 @@
 @media (min-width: $display) { 
 	
 	#main .hero { 
-		background-image: url('../images/robbyn_alley_DISPLAY.jpg'); 
-		height:650px !important;
+		background-image: url('../images/hero_01_DISPLAY.jpg'); 
+		height:700px !important;
 	}
 
 	.parallax_01{

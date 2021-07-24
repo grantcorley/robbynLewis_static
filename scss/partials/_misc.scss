@@ -6,3 +6,14 @@
     -ms-user-select: none;      
     user-select: none;
   }
+
+  .scroll_offset_01{
+    //scroll-margin-top: 11em;
+    scroll-margin-top: ($header_height_full + 20px);
+  }
+
+  .scroll_offset_02{
+    //scroll-margin-top: 3em;
+    scroll-margin-top: ($header_height_collapsed + 20px);
+
+  }
