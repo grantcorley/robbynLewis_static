@@ -18,7 +18,14 @@ function initialize(){
 
 	var isMenuOpen = false;
 
-	// menu_icon.classList.remove("hide");
+	window.addEventListener('resize', onWindowResize);
+
+	function onWindowResize(){
+		//console.log("window resize");
+		closeMenu();
+	}
+
+
 
 	document.addEventListener('scroll', function(e){
 
@@ -39,9 +46,14 @@ function initialize(){
 			}
 		}
 
-		if(isMenuOpen){
+		if(isMenuOpen && window.ScrollY > 450){
 			closeMenu();
+			if (nav.classList.contains('menu_visible')){
+				nav.classList.remove('menu_visible');
+			}
 		}
+
+
 
 
 	});
@@ -65,25 +77,55 @@ function initialize(){
 	function openMenu(){
 			console.log("open menu");
 			nav.classList.add('menu_visible');
+			
+			if (nav.classList.contains('close_menu')){
+				nav.classList.remove('close_menu');
+			}
+			nav.classList.add('open_menu');
+			//transform: translate(50px, 10px);
+			//nav.classList.add('menu_open');
 			isMenuOpen = true;
 	}
 
 	function closeMenu(){
 			console.log("close menu");
-			nav.classList.remove('menu_visible');
+			//nav.classList.remove('menu_visible');
+			
+			if (nav.classList.contains('open_menu')){
+				nav.classList.remove('open_menu');
+			}
+			nav.classList.add('close_menu');
 			isMenuOpen = false;
 	}
+
+
+	nav.addEventListener('animationend', () => {
+		
+		if(!isMenuOpen){
+			nav.classList.remove('menu_visible');
+			console.log('Animation ended: menu is closed');
+		}
+
+		else if(isMenuOpen){
+			console.log('Animation ended: menu is open');
+		}
+	  });
+
+	
+
+
 
 
 	function collapseHeader(){
 		//console.log('collapseHeader()');
 		header.classList.add("collapsed");
+		nav.classList.add('menu_header_collapsed');
 	}
 
 
 	function expandHeader(){
-		//console.log('expandHeader()');
 		header.classList.remove("collapsed");
+		nav.classList.remove('menu_header_collapsed');
 	}
 
 

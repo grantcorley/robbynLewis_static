@@ -472,16 +472,40 @@ h2.pull-quote {
 .menu_visible {
   display: block !important; }
 
+.menu_header_collapsed {
+  top: 60px !important; }
+
+@keyframes slidein {
+  from {
+    right: -800px; }
+  to {
+    right: 0px; } }
+@keyframes slideout {
+  from {
+    right: 0; }
+  to {
+    right: -800px; } }
+.open_menu {
+  animation-name: slidein;
+  animation-duration: .25s;
+  animation-timing-function: ease-out;
+  right: 0px; }
+
+.close_menu {
+  animation-name: slideout;
+  animation-duration: .2s;
+  animation-timing-function: ease-in; }
+
 nav.menu {
   display: none;
-  z-index: 2000;
+  z-index: 5000;
   height: 100%;
   position: absolute;
   width: 100%;
-  right: 0;
-  top: 0;
+  top: 120px;
   background-color: #337dc0;
-  font-family: 'eastmangrotesque-extrabold'; }
+  font-family: 'eastmangrotesque-extrabold';
+  height: 1200px; }
   nav.menu ul {
     list-style-type: none;
     text-transform: uppercase;
@@ -490,26 +514,30 @@ nav.menu {
       text-align: center;
       line-height: 2em;
       border-top: 1px solid #7dafdc;
-      padding: 1em 0; }
+      padding: 0; }
       nav.menu ul li:first-child {
         border-top: 0; }
       nav.menu ul li a {
         font-size: 1.1em;
         color: white;
-        text-decoration: none; }
+        text-decoration: none;
+        padding: 1em 0;
+        display: block; }
+        nav.menu ul li a:hover {
+          background-color: #4c91d0; }
+        nav.menu ul li a:active {
+          background-color: #2e70ac; }
 
 /*----------- BREAKPOINTS ------------ */
 @media (min-width: 768px) {
   nav.menu {
     z-index: 2000;
-    height: 100%;
     position: absolute;
     width: 45%;
-    right: 0;
-    top: 0;
     background-color: #337dc0;
     font-family: 'eastmangrotesque-extrabold';
-    box-shadow: -3px 2px 2px 1px rgba(0, 0, 0, 0.4); }
+    box-shadow: -3px 2px 2px 1px rgba(0, 0, 0, 0.4);
+    opacity: .97; }
     nav.menu ul {
       list-style-type: none;
       text-transform: uppercase;
@@ -517,8 +545,7 @@ nav.menu {
       nav.menu ul li {
         text-align: center;
         line-height: 2em;
-        border-top: 1px solid #7dafdc;
-        padding: 1em 0; }
+        border-top: 1px solid #7dafdc; }
         nav.menu ul li:first-child {
           border-top: 0; }
         nav.menu ul li a {
@@ -528,11 +555,8 @@ nav.menu {
 @media (min-width: 1200px) {
   nav.menu {
     z-index: 2000;
-    height: 100%;
     position: absolute;
     width: 30%;
-    right: 0;
-    top: 0;
     background-color: #337dc0;
     font-family: 'eastmangrotesque-extrabold';
     box-shadow: -3px 2px 2px 1px rgba(0, 0, 0, 0.4); }
@@ -543,8 +567,7 @@ nav.menu {
       nav.menu ul li {
         text-align: center;
         line-height: 2em;
-        border-top: 1px solid #7dafdc;
-        padding: 1em 0; }
+        border-top: 1px solid #7dafdc; }
         nav.menu ul li:first-child {
           border-top: 0; }
         nav.menu ul li a {
