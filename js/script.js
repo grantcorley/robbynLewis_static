@@ -46,12 +46,12 @@ function initialize(){
 			}
 		}
 
-		if(isMenuOpen && window.ScrollY > 450){
-			closeMenu();
-			if (nav.classList.contains('menu_visible')){
-				nav.classList.remove('menu_visible');
-			}
-		}
+		// if(isMenuOpen && window.ScrollY > 450){
+		// 	closeMenu();
+		// 	if (nav.classList.contains('menu_visible')){
+		// 		nav.classList.remove('menu_visible');
+		// 	}
+		// }
 
 
 

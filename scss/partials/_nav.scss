@@ -31,21 +31,16 @@
     animation-name: slideout;
     animation-duration: .2s;
     animation-timing-function: ease-in;
-    //right:-600px;
-
-    //display:none;
   }
 
 
 
 nav.menu{  //the nav is placed just inside the 'main' div below the header
     display: none;
-    //right: -600px;
     z-index:5000;
     height:100%;
     position: absolute;
     width:100%;
-    //right:0;
     top: $header_height_full;
     background-color: $secondary;
     font-family: 'eastmangrotesque-extrabold';
@@ -87,6 +82,19 @@ nav.menu{  //the nav is placed just inside the 'main' div below the header
         }
 
     }//end ul
+
+    .social-media-links{
+        border:2px solid red;
+        a{
+
+            img{ 
+                max-width: 36px;
+                height:auto;
+                margin: 1em .5em 0 .5em;
+            }
+           
+        }
+    }
 
 }//end nav.menu
 
@@ -132,6 +140,8 @@ nav.menu{  //the nav is placed just inside the 'main' div below the header
             }
     
         }//end ul
+
+
     
     }//end nav.menu
 
