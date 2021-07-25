@@ -1,4 +1,11 @@
 @import url(normalize.css);
+@keyframes headline_animation {
+  from {
+    opacity: 0;
+    bottom: 0; }
+  to {
+    opacity: 1;
+    bottom: 30px; } }
 .disable-select {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -6,10 +13,10 @@
   user-select: none; }
 
 .scroll_offset_01 {
-  scroll-margin-top: 140px; }
+  scroll-margin-top: 120px; }
 
 .scroll_offset_02 {
-  scroll-margin-top: 80px; }
+  scroll-margin-top: 60px; }
 
 @font-face {
   font-family: 'eastmangrotesque-extrabold';
@@ -187,6 +194,11 @@ html.home article {
       bottom: 5%;
       left: 0;
       width: 100%; }
+      @media (min-width: 768px) {
+        #main .hero .lockup {
+          animation-name: headline_animation;
+          animation-duration: 1s;
+          animation-timing-function: ease-out; } }
       #main .hero .lockup h2 {
         color: white;
         width: 100%;

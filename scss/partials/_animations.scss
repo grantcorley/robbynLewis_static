@@ -1,0 +1,6 @@
+//_animations.scss
+
+@keyframes headline_animation {
+    from {opacity: 0; bottom:0;}
+    to {opacity: 1; bottom:30px;}
+  }
