@@ -8,10 +8,19 @@
   }
 
   .scroll_offset_01{
-    scroll-margin-top: ($header_height_full);
+    // scroll-margin-top: ($header_height_full + 32px);
+    scroll-margin-top: ($header_height_collapsed);
   }
 
   .scroll_offset_02{
     scroll-margin-top: ($header_height_collapsed);
 
+  }
+
+  .img-thumbnail{
+    margin-bottom:1.5em;
+  }
+
+  .family-photo{
+    transform: rotate(3.2deg);
   }

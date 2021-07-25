@@ -13,10 +13,16 @@
   user-select: none; }
 
 .scroll_offset_01 {
-  scroll-margin-top: 120px; }
+  scroll-margin-top: 60px; }
 
 .scroll_offset_02 {
   scroll-margin-top: 60px; }
+
+.img-thumbnail {
+  margin-bottom: 1.5em; }
+
+.family-photo {
+  transform: rotate(3.2deg); }
 
 @font-face {
   font-family: 'eastmangrotesque-extrabold';
