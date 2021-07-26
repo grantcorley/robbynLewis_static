@@ -17,6 +17,7 @@ function initialize(){
 	const header_height = 90;
 	const header = document.querySelector('header');
 	const menu_icon = document.querySelector('.menu-icon');
+	const hamburger = menu_icon.querySelector('.hamburger');
 
 	const nav = document.querySelector('nav.menu');
 
@@ -73,14 +74,6 @@ function initialize(){
 			}
 		}
 
-		// if(isMenuOpen && window.ScrollY > 450){
-		// 	closeMenu();
-		// 	if (nav.classList.contains('menu_visible')){
-		// 		nav.classList.remove('menu_visible');
-		// 	}
-		// }
-
-
 
 
 	});
@@ -104,6 +97,7 @@ function initialize(){
 	function openMenu(){
 			console.log("open menu");
 			nav.classList.add('menu_visible');
+			hamburger.classList.add('is-active');
 			
 			if (nav.classList.contains('close_menu')){
 				nav.classList.remove('close_menu');
@@ -116,6 +110,7 @@ function initialize(){
 
 	function closeMenu(){
 			console.log("close menu");
+			hamburger.classList.remove('is-active');
 			//nav.classList.remove('menu_visible');
 			
 			if (nav.classList.contains('open_menu')){

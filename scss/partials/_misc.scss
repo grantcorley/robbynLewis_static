@@ -24,3 +24,23 @@
   .family-photo{
     transform: rotate(3.2deg);
   }
+
+  .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    // position: absolute;
+    // width: 40px;
+    // height: 4px;
+    // transition-timing-function: ease;
+    // transition-duration: .15s;
+    // transition-property: transform;
+    // border-radius: 4px;
+    background-color: #fff;
+}
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before {
+  background-color: #fff;
+}
+
+button.hamburger:focus {
+  outline: none;
+  /* outline: -webkit-focus-ring-color auto 5px; */
+}
