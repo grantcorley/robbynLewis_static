@@ -85,9 +85,9 @@ header {
     top: 0;
     z-index: 1000;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    padding-right: 2em; }
+    padding-right: 1em; }
     header .menu-icon-holder .menu-icon {
       color: white;
       cursor: pointer; }
@@ -112,7 +112,9 @@ header.collapsed {
     header .logo {
       max-width: 200px;
       height: auto;
-      margin: .5em auto; } }
+      margin: .5em auto; }
+    header .menu-icon-holder {
+      justify-content: flex-end; } }
 footer {
   padding: 1em 0;
   text-align: center;

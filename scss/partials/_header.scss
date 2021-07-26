@@ -26,9 +26,10 @@ header{
 			top:0;
 			z-index: 1000;
 			display: flex;
-			justify-content: flex-end;
+			// justify-content: flex-end;
+			justify-content: center;
 			align-items: center;
-			padding-right:2em;
+			padding-right:1em;
 
 			.menu-icon{
 				color:white;
@@ -71,6 +72,10 @@ header.collapsed{
 		max-width: 200px;
 		height:auto;
 		margin: .5em auto;
+	}
+
+	.menu-icon-holder{
+		justify-content: flex-end;
 	}
 
 }
