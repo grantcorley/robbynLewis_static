@@ -40,6 +40,7 @@ function initialize(){
 	nav.addEventListener('click', function(){
 		if(isMenuOpen){
 			nav.classList.remove('menu_visible');
+			hamburger.classList.remove('is-active');
 			isMenuOpen = false;
 			number_scrolls++;
 			console.log(`${number_scrolls} scrolls`);
@@ -125,18 +126,15 @@ function initialize(){
 		
 		if(!isMenuOpen){
 			nav.classList.remove('menu_visible');
-			console.log('Animation ended: menu is closed');
+			//console.log('Animation ended: menu is closed');
 		}
 
 		else if(isMenuOpen){
-			console.log('Animation ended: menu is open');
+			//console.log('Animation ended: menu is open');
 		}
 	  });
 
 	
-
-
-
 
 	function collapseHeader(){
 		//console.log('collapseHeader()');
