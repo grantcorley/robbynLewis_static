@@ -255,7 +255,6 @@ html.home article {
         #main .hero .lockup .buttons a.button.donate:active {
           background-color: #2c893b; }
   #main .grabber {
-    border: 1px dotted red;
     text-align: center; }
     #main .grabber h2 {
       font-size: 2em; }
