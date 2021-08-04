@@ -68,7 +68,6 @@ h3 {
 header {
   background-color: #171243;
   text-align: center;
-  border-bottom: 3px solid #337dc0;
   position: relative;
   height: 120px;
   display: flex;
@@ -107,8 +106,7 @@ header.collapsed {
 @media (min-width: 768px) {
   header {
     background-color: #171243;
-    text-align: center;
-    border-bottom: 4px solid #337dc0; }
+    text-align: center; }
     header .logo {
       max-width: 200px;
       height: auto;
@@ -257,7 +255,12 @@ html.home article {
         #main .hero .lockup .buttons a.button.donate:active {
           background-color: #2c893b; }
   #main .grabber {
+    border: 1px dotted red;
     text-align: center; }
+    #main .grabber h2 {
+      font-size: 2em; }
+    #main .grabber .copy p {
+      text-align: left; }
   #main section {
     margin-top: 2.4em;
     scroll-behavior: smooth; }
@@ -545,32 +548,52 @@ nav.menu {
   top: 120px;
   background-color: #337dc0;
   font-family: 'eastmangrotesque-extrabold';
-  height: 1200px; }
+  height: 1200px;
+  text-align: left; }
   nav.menu ul {
     list-style-type: none;
     text-transform: uppercase;
     padding-left: 0; }
     nav.menu ul li {
-      text-align: center;
       line-height: 2em;
-      border-top: 1px solid #7dafdc;
-      padding: 0; }
+      padding: 0;
+      margin-top: .8em;
+      border-top: 1px solid rgba(255, 255, 255, 0.25); }
       nav.menu ul li:first-child {
-        border-top: 0; }
+        margin-top: 0; }
       nav.menu ul li a {
         font-size: 1.1em;
         color: white;
         text-decoration: none;
         padding: 1em 0;
-        display: block; }
+        display: block;
+        padding-left: 1.2em; }
         nav.menu ul li a:hover {
           background-color: #4c91d0; }
         nav.menu ul li a:active {
           background-color: #2e70ac; }
-  nav.menu .social-media-links a img {
-    max-width: 36px;
-    height: auto;
-    margin: 1em .5em 0 .5em; }
+      nav.menu ul li a.donate {
+        background-color: #339c44; }
+        nav.menu ul li a.donate:hover {
+          background-color: #40ab51; }
+        nav.menu ul li a.donate:active {
+          background-color: #268836; }
+      nav.menu ul li ul.submenu li {
+        line-height: 1.32em;
+        margin-top: 0;
+        border: 0; }
+        nav.menu ul li ul.submenu li:first-child {
+          margin-top: -.5em; }
+        nav.menu ul li ul.submenu li a {
+          padding-left: 2.5em;
+          font-family: "Open Sans", sans-serif;
+          text-transform: capitalize; }
+  nav.menu .social-media-links {
+    text-align: center; }
+    nav.menu .social-media-links a img {
+      max-width: 50px;
+      height: auto;
+      margin: 1em .75em 0 .75em; }
 
 /*----------- BREAKPOINTS ------------ */
 @media (min-width: 768px) {

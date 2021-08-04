@@ -13,6 +13,11 @@ body{
 	display:none;
 }
 
+
+
+
+//-------------------------
+
 html.home{
 	article{
 		padding-top:1.4em;
@@ -144,14 +149,19 @@ html.home{
 
 
 	.grabber{
+		border:1px dotted red;
 		text-align: center;
 		h2{
 			// text-transform: uppercase;
+			font-size:2em;
 		}
 
-		p{
-			// color:gray;
-			// font-family: Georgia, serif;
+		.copy{
+			p{
+				text-align: left;;
+				// color:gray;
+				// font-family: Georgia, serif;
+			}
 		}
 		
 	}
