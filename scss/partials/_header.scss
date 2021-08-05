@@ -11,9 +11,19 @@ header{
 	justify-content: center;
 	align-items: center;
 
-	.logo{
-		max-width: 160px;
-		height:auto;
+	a{
+
+		//border:1px dotted red;
+		//display: inline-block;
+		width:160px;
+		// max-width: 160px;
+		//height: auto;
+
+		.logo{
+			max-width: 160px;
+			height:auto;
+			display: block;;
+		}
 	}
 
 	.menu-icon-holder{
@@ -52,8 +62,10 @@ header.collapsed{
 	left:0;
 	z-index: 2000;
 
-	.logo{
-		display: none;
+	a{
+		.logo{
+			display: none;
+		}
 	}
 
 }
@@ -68,10 +80,12 @@ header.collapsed{
 	text-align: center;
 	//border-bottom:4px solid $secondary;
 
-	.logo{
-		max-width: 200px;
-		height:auto;
-		margin: .5em auto;
+	a{
+		.logo{
+			max-width: 200px;
+			height:auto;
+			margin: .5em auto;
+		}
 	}
 
 	.menu-icon-holder{

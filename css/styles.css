@@ -73,9 +73,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center; }
-  header .logo {
-    max-width: 160px;
-    height: auto; }
+  header a {
+    width: 160px; }
+    header a .logo {
+      max-width: 160px;
+      height: auto;
+      display: block; }
   header .menu-icon-holder {
     width: 20%;
     height: 100%;
@@ -99,7 +102,7 @@ header.collapsed {
   top: 0;
   left: 0;
   z-index: 2000; }
-  header.collapsed .logo {
+  header.collapsed a .logo {
     display: none; }
 
 /*----------- BREAKPOINTS ------------ */
@@ -107,7 +110,7 @@ header.collapsed {
   header {
     background-color: #171243;
     text-align: center; }
-    header .logo {
+    header a .logo {
       max-width: 200px;
       height: auto;
       margin: .5em auto; }
@@ -603,60 +606,78 @@ h2.pull-quote {
   animation-duration: .2s;
   animation-timing-function: ease-in; }
 
-nav.menu {
+/* Hide scrollbar for Chrome, Safari and Opera */
+#nav-holder::-webkit-scrollbar {
+  display: none; }
+
+#nav-holder {
+  /* Hide scrollbar for IE, Edge and Firefox */
   display: none;
-  z-index: 5000;
-  height: 100%;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
   position: absolute;
+  z-index: 6000;
+  height: 1000px;
   width: 100%;
   top: 120px;
-  background-color: #337dc0;
-  font-family: 'eastmangrotesque-extrabold';
-  height: 1200px;
-  text-align: left; }
-  nav.menu ul {
-    list-style-type: none;
-    text-transform: uppercase;
-    padding-left: 0; }
-    nav.menu ul li {
-      line-height: 2em;
-      padding: 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.25); }
-      nav.menu ul li:first-child {
-        margin-top: 0; }
-      nav.menu ul li a {
-        font-size: 1.1em;
-        color: white;
-        text-decoration: none;
-        padding: 1em 0;
-        display: block;
-        padding-left: 1.2em; }
-        nav.menu ul li a:hover {
-          background-color: #4c91d0; }
-        nav.menu ul li a:active {
-          background-color: #2e70ac; }
-      nav.menu ul li a.donate {
-        background-color: #339c44; }
-        nav.menu ul li a.donate:hover {
-          background-color: #40ab51; }
-        nav.menu ul li a.donate:active {
-          background-color: #268836; }
-      nav.menu ul li ul.submenu li {
-        line-height: 1.32em;
-        margin-top: 0;
-        border: 0; }
-        nav.menu ul li ul.submenu li:first-child {
-          margin-top: -.5em; }
-        nav.menu ul li ul.submenu li a {
-          padding-left: 2.5em;
-          font-family: "Open Sans", sans-serif;
-          text-transform: capitalize; }
-  nav.menu .social-media-links {
-    text-align: center; }
-    nav.menu .social-media-links a img {
-      max-width: 50px;
-      height: auto;
-      margin: 1em .75em 0 .75em; }
+  overflow-x: hidden;
+  overflow-y: auto; }
+  #nav-holder nav.menu {
+    display: none;
+    z-index: 5000;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background-color: #337dc0;
+    font-family: 'eastmangrotesque-extrabold';
+    height: 1200px;
+    text-align: left; }
+    #nav-holder nav.menu ul {
+      list-style-type: none;
+      text-transform: uppercase;
+      padding-left: 0; }
+      #nav-holder nav.menu ul li {
+        line-height: 2em;
+        padding: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.25); }
+        #nav-holder nav.menu ul li:first-child {
+          margin-top: 0; }
+        #nav-holder nav.menu ul li a {
+          font-size: 1.1em;
+          color: white;
+          text-decoration: none;
+          padding: 1em 0;
+          display: block;
+          padding-left: 1.2em;
+          width: 100%; }
+          #nav-holder nav.menu ul li a:hover {
+            background-color: #4c91d0; }
+          #nav-holder nav.menu ul li a:active {
+            background-color: #2e70ac; }
+        #nav-holder nav.menu ul li a.donate {
+          background-color: #339c44; }
+          #nav-holder nav.menu ul li a.donate:hover {
+            background-color: #40ab51; }
+          #nav-holder nav.menu ul li a.donate:active {
+            background-color: #268836; }
+        #nav-holder nav.menu ul li ul.submenu li {
+          line-height: 1.32em;
+          margin-top: 0;
+          border: 0; }
+          #nav-holder nav.menu ul li ul.submenu li:first-child {
+            margin-top: -.5em; }
+          #nav-holder nav.menu ul li ul.submenu li a {
+            padding-left: 2.5em;
+            font-family: "Open Sans", sans-serif;
+            text-transform: capitalize; }
+    #nav-holder nav.menu .social-media-links {
+      text-align: center; }
+      #nav-holder nav.menu .social-media-links a img {
+        max-width: 50px;
+        height: auto;
+        margin: 1em .75em 0 .75em; }
 
 /*----------- BREAKPOINTS ------------ */
 @media (min-width: 768px) {

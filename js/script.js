@@ -12,14 +12,16 @@
 
 
 function initialize(){
-	console.log('initialize()');
+	//console.log('initialize()');
 
 	const header_height = 90;
 	const header = document.querySelector('header');
 	const menu_icon = document.querySelector('.menu-icon');
 	const hamburger = menu_icon.querySelector('.hamburger');
 
+	const navHolder = document.querySelector("#nav-holder");
 	const nav = document.querySelector('nav.menu');
+	
 
 	let isMenuOpen = false;
 	let number_scrolls = 0;
@@ -95,6 +97,7 @@ function initialize(){
 
 	function openMenu(){
 			console.log("open menu");
+			navHolder.classList.add('menu_visible');
 			nav.classList.add('menu_visible');
 			hamburger.classList.add('is-active');
 			
@@ -124,6 +127,7 @@ function initialize(){
 		
 		if(!isMenuOpen){
 			nav.classList.remove('menu_visible');
+			navHolder.classList.remove('menu_visible');
 			//console.log('Animation ended: menu is closed');
 		}
 
@@ -137,38 +141,17 @@ function initialize(){
 	function collapseHeader(){
 		//console.log('collapseHeader()');
 		header.classList.add("collapsed");
-		nav.classList.add('menu_header_collapsed');
+		navHolder.classList.add('menu_header_collapsed');
 	}
 
 
 	function expandHeader(){
 		header.classList.remove("collapsed");
-		nav.classList.remove('menu_header_collapsed');
+		navHolder.classList.remove('menu_header_collapsed');
 	}
 
 
-	// Add smooth scrolling to all links
-	$("a").on('click', function(event) {
-
-		// Make sure this.hash has a value before overriding default behavior
-		if (this.hash !== "") {
-		  // Prevent default anchor click behavior
-		  event.preventDefault();
 	
-		  // Store hash
-		  var hash = this.hash;
-	
-		  // Using jQuery's animate() method to add smooth page scroll
-		  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-		  $('html, body').animate({
-			scrollTop: $(hash).offset().top
-		  }, 800, function(){
-	
-			// Add hash (#) to URL when done scrolling (default click behavior)
-			window.location.hash = hash;
-		  });
-		} // End if
-	  });
 
 
 
