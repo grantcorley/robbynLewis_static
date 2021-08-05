@@ -151,7 +151,7 @@ footer {
   height: 300px; }
 
 .parallax_01 {
-  background-image: url("../images/curtisBay_MOBILE.jpg"); }
+  background-image: url("../images/curtisBay_MOBILE_duoTone.jpg"); }
 
 .parallax_02 {
   background-image: url("../images/robbyn_linwood_MOBILE.jpg"); }
@@ -184,6 +184,9 @@ body {
 
 .hide {
   display: none; }
+
+a {
+  color: #337dc0; }
 
 html.home article {
   padding-top: 1.4em;
@@ -255,9 +258,13 @@ html.home article {
         #main .hero .lockup .buttons a.button.donate:active {
           background-color: #2c893b; }
   #main .grabber {
-    text-align: center; }
+    text-align: center;
+    padding-bottom: 2em; }
     #main .grabber h2 {
       font-size: 2em; }
+      #main .grabber h2 .emph {
+        color: #171243;
+        text-decoration: underline; }
     #main .grabber .copy p {
       text-align: center; }
   #main section {
@@ -323,7 +330,7 @@ section.callouts .callout {
     position: absolute;
     bottom: 0;
     display: flex;
-    z-index: 5000;
+    z-index: 1500;
     align-items: center;
     justify-content: center; }
     section.callouts .callout .block h3 {
@@ -379,14 +386,24 @@ h2.pull-quote {
       margin-bottom: .25em; }
     #main .hero .lockup .buttons {
       top: 250px; }
-  #main .grabber h2 {
-    font-size: 3em;
-    line-height: .95em;
-    margin-bottom: .35em;
-    text-align: right; }
-  #main .grabber .copy p {
-    padding-bottom: 1em;
-    text-align: left; }
+  #main .grabber {
+    display: flex;
+    flex-flow: wrap row; }
+    #main .grabber h2 {
+      font-size: 3em;
+      line-height: .95em;
+      margin-bottom: .35em;
+      text-align: right;
+      width: 45%;
+      margin-right: 5%; }
+    #main .grabber .copy {
+      width: 50%;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center; }
+      #main .grabber .copy p {
+        padding-bottom: 1em;
+        text-align: left; }
   #main .section-divider {
     margin-bottom: 2em;
     position: relative;
@@ -436,7 +453,7 @@ h2.pull-quote {
         position: absolute;
         bottom: 0;
         display: flex;
-        z-index: 5000;
+        z-index: 1500;
         align-items: center;
         justify-content: center; }
         #main section.callouts .callout .block h3 {
@@ -536,7 +553,7 @@ h2.pull-quote {
         position: absolute;
         bottom: 0;
         display: flex;
-        z-index: 5000;
+        z-index: 1500;
         align-items: center;
         justify-content: center; }
         #main section.callouts .callout .block h3 {

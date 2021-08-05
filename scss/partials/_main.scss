@@ -13,8 +13,10 @@ body{
 	display:none;
 }
 
-
-
+//generic links
+a{
+	color:$secondary;
+}
 
 //-------------------------
 
@@ -148,11 +150,18 @@ html.home{
 
 
 	.grabber{
-		//border:1px dotted red;
+		//border:2px dotted red;
 		text-align: center;
+		padding-bottom:2em;
 		h2{
 			// text-transform: uppercase;
 			font-size:2em;
+
+			.emph{
+				color:$primary;
+				text-decoration: underline;
+			}
+
 		}
 
 		.copy{
@@ -271,7 +280,7 @@ section.callouts{
 					position:absolute;
 					bottom:0;
 					display: flex;
-					z-index: 5000;
+					z-index: 1500;
 					align-items: center;
 					justify-content: center;
 
@@ -419,15 +428,30 @@ h2.pull-quote{
 		
 
 		.grabber{
+
+			//border:2px solid blue;
+			display: flex;
+			flex-flow: wrap row;
+
 			h2{
 				font-size: 3em;
 				line-height: .95em;
 				margin-bottom: .35em;
 				text-align: right;
+				width:45%;
+				margin-right:5%;
+
+			
 
 			}
 
 			.copy{
+
+				//border:1px dotted red;
+				width:50%;
+				display: flex;
+				flex-flow: column wrap;
+				justify-content: center;
 
 				p{
 					padding-bottom:1em;
@@ -518,7 +542,7 @@ section.callouts{
 					position:absolute;
 					bottom:0;
 					display: flex;
-					z-index: 5000;
+					z-index: 1500;
 					align-items: center;
 					justify-content: center;
 
@@ -748,7 +772,7 @@ section.callouts{
 					position:absolute;
 					bottom:0;
 					display: flex;
-					z-index: 5000;
+					z-index: 1500;
 					align-items: center;
 					justify-content: center;
 
