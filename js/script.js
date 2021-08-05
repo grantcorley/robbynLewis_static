@@ -22,11 +22,9 @@ function initialize(){
 	const nav = document.querySelector('nav.menu');
 
 	let isMenuOpen = false;
-
 	let number_scrolls = 0;
 
 	const main = document.querySelector('#main');
-
 	const allSections = main.querySelectorAll('section');
 
 

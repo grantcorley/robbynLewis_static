@@ -194,7 +194,7 @@ html.home article {
 
 #main {
   background-color: white;
-  padding-bottom: 6em;
+  padding-bottom: 5em;
   position: relative; }
   #main .hero {
     position: relative;
@@ -259,7 +259,7 @@ html.home article {
     #main .grabber h2 {
       font-size: 2em; }
     #main .grabber .copy p {
-      text-align: left; }
+      text-align: center; }
   #main section {
     margin-top: 2.4em;
     scroll-behavior: smooth; }
@@ -306,31 +306,42 @@ html.home article {
       text-decoration-color: #337dc0;
       text-underline-position: under; }
 
-.by-the-numbers {
-  padding-top: 2em;
-  text-align: center;
-  border-top: 1px solid #cdcdcd; }
-  .by-the-numbers h3 {
-    color: gray;
-    letter-spacing: .14rem;
-    margin-bottom: 2em; }
-    .by-the-numbers h3 .punch {
-      color: #337dc0; }
-  .by-the-numbers .col-sm {
-    text-align: center; }
-    .by-the-numbers .col-sm .fal {
-      color: #337dc0; }
-    .by-the-numbers .col-sm img {
-      width: 16%;
-      height: auto; }
-    .by-the-numbers .col-sm p.stat {
-      color: #337dc0;
-      font-family: 'eastmangrotesque-extrabold', sans-serif;
-      font-size: 2em;
-      margin-bottom: -.4em;
-      padding-bottom: 0; }
-    .by-the-numbers .col-sm p.achievement {
-      padding-bottom: 1.85em; }
+section.callouts .callout {
+  display: block;
+  background-position: top;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 1em;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  section.callouts .callout .block {
+    width: 100%;
+    height: 25%;
+    background-color: rgba(51, 126, 192, 0.9);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    z-index: 5000;
+    align-items: center;
+    justify-content: center; }
+    section.callouts .callout .block h3 {
+      color: white;
+      font-weight: normal;
+      text-transform: uppercase;
+      border: 1px solid white;
+      display: inline-block;
+      padding: .36em .85em;
+      border-radius: 5px; }
+      section.callouts .callout .block h3:hover {
+        background-color: #408dd1; }
+      section.callouts .callout .block h3:active {
+        background-color: #2a72b1; }
+section.callouts .meet-robbyn {
+  background-image: url("../images/placeholder.jpg"); }
+section.callouts .donate {
+  background-image: url("../images/placeholder2.jpg"); }
 
 section.contact p {
   text-align: center; }
@@ -356,6 +367,9 @@ h2.pull-quote {
   h2.pull-quote span.pop {
     color: #171243; }
 
+.friends-robbyn-lewis {
+  margin-top: 2em; }
+
 /*------------------- ============= BREAKPOINTS =============== ------------ */
 @media (min-width: 768px) {
   #main .hero .lockup {
@@ -368,9 +382,11 @@ h2.pull-quote {
   #main .grabber h2 {
     font-size: 3em;
     line-height: .95em;
-    margin-bottom: .35em; }
-  #main .grabber p {
-    padding-bottom: 1em; }
+    margin-bottom: .35em;
+    text-align: right; }
+  #main .grabber .copy p {
+    padding-bottom: 1em;
+    text-align: left; }
   #main .section-divider {
     margin-bottom: 2em;
     position: relative;
@@ -399,28 +415,42 @@ h2.pull-quote {
       position: absolute;
       top: 144px;
       font-size: 2.6em; }
-
-  .by-the-numbers {
-    padding-top: 2em;
-    text-align: center;
-    border-top: 1px solid #cdcdcd; }
-    .by-the-numbers h3 {
-      color: gray;
-      letter-spacing: .14rem;
-      margin-bottom: 2em; }
-      .by-the-numbers h3 .punch {
-        color: #337dc0; }
-    .by-the-numbers .col-sm {
-      text-align: center; }
-      .by-the-numbers .col-sm img {
-        width: 30%;
-        height: auto; }
-      .by-the-numbers .col-sm p.stat {
-        color: #337dc0;
-        font-family: 'eastmangrotesque-extrabold', sans-serif;
-        font-size: 3em;
-        margin-bottom: -.4em;
-        padding-bottom: 0; } }
+  #main section.callouts {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around; }
+    #main section.callouts .callout {
+      display: flex;
+      background-position: top;
+      background-size: cover;
+      width: 48%;
+      height: 250px;
+      margin-bottom: 1em;
+      justify-content: center;
+      align-items: center;
+      position: relative; }
+      #main section.callouts .callout .block {
+        width: 100%;
+        height: 25%;
+        background-color: rgba(51, 126, 192, 0.9);
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        z-index: 5000;
+        align-items: center;
+        justify-content: center; }
+        #main section.callouts .callout .block h3 {
+          color: white;
+          font-weight: normal;
+          text-transform: uppercase;
+          border: 1px solid white;
+          display: inline-block;
+          padding: .36em .85em;
+          border-radius: 5px; }
+          #main section.callouts .callout .block h3:hover {
+            background-color: #408dd1; }
+          #main section.callouts .callout .block h3:active {
+            background-color: #2a72b1; } }
 @media (min-width: 1200px) {
   #main .hero .lockup {
     bottom: 36px; }
@@ -485,32 +515,50 @@ h2.pull-quote {
       position: absolute;
       top: 164px;
       font-size: 3.6em; }
+  #main section.callouts {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+    #main section.callouts .callout {
+      display: flex;
+      background-position: top;
+      background-size: cover;
+      width: 33%;
+      height: 300px;
+      margin-bottom: 1em;
+      justify-content: center;
+      align-items: center;
+      position: relative; }
+      #main section.callouts .callout .block {
+        width: 100%;
+        height: 25%;
+        background-color: rgba(51, 126, 192, 0.9);
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        z-index: 5000;
+        align-items: center;
+        justify-content: center; }
+        #main section.callouts .callout .block h3 {
+          color: white;
+          font-weight: normal;
+          text-transform: uppercase;
+          border: 1px solid white;
+          display: inline-block;
+          padding: .36em .85em;
+          border-radius: 5px; }
+          #main section.callouts .callout .block h3:hover {
+            background-color: #408dd1; }
+          #main section.callouts .callout .block h3:active {
+            background-color: #2a72b1; }
+    #main section.callouts .meet-robbyn {
+      background-image: url("../images/placeholder.jpg");
+      margin-right: 1em; }
+    #main section.callouts .donate {
+      background-image: url("../images/placeholder2.jpg");
+      margin-left: 1em; }
   #main .section-divider {
-    margin-bottom: 3em; }
-
-  .by-the-numbers {
-    padding-top: 2em;
-    text-align: center;
-    border-top: 1px solid #cdcdcd; }
-    .by-the-numbers h3 {
-      color: gray;
-      letter-spacing: .14rem;
-      margin-bottom: 2em; }
-      .by-the-numbers h3 .punch {
-        color: #337dc0; }
-    .by-the-numbers .col-sm {
-      text-align: center; }
-      .by-the-numbers .col-sm img {
-        width: 32%;
-        height: auto; }
-      .by-the-numbers .col-sm p.stat {
-        color: #337dc0;
-        font-family: 'eastmangrotesque-extrabold', sans-serif;
-        font-size: 4em;
-        margin-bottom: -.4em;
-        padding-bottom: 0; }
-      .by-the-numbers .col-sm p.achievement {
-        padding-bottom: 0; } }
+    margin-bottom: 3em; } }
 .menu_visible {
   display: block !important; }
 
@@ -556,7 +604,6 @@ nav.menu {
     nav.menu ul li {
       line-height: 2em;
       padding: 0;
-      margin-top: .8em;
       border-top: 1px solid rgba(255, 255, 255, 0.25); }
       nav.menu ul li:first-child {
         margin-top: 0; }
