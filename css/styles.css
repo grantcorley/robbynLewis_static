@@ -1000,10 +1000,22 @@ h2.pull-quote {
           display: none; } }
 html#inside #main article {
   margin-top: 2em; }
-html#inside #main article.container .row.priorities-intro {
-  margin-bottom: 1.6em; }
-  html#inside #main article.container .row.priorities-intro .col-md p {
+html#inside #main .container .row.priorities-intro {
+  margin: 3em auto 1.2em auto; }
+  html#inside #main .container .row.priorities-intro .col-md p,
+  html#inside #main .container .row.priorities-intro .col-lg p {
     font-size: 1.3em;
     color: #5f5f5f; }
+html#inside #main .container .row article.priority h3 {
+  background-color: #337dc0;
+  color: white;
+  padding: 1em;
+  font-weight: normal;
+  font-family: 'eastmangrotesque-extrabold'; }
+  html#inside #main .container .row article.priority h3 span.before {
+    color: #7dafdc; }
+html#inside #main .container .row article.priority p.emph {
+  color: #337dc0;
+  font-weight: bold; }
 
 /*# sourceMappingURL=styles.css.map */
