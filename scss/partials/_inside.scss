@@ -9,6 +9,12 @@ html#inside{
 
     article{
       margin-top:2em;
+
+      h2{
+        margin-bottom: 1em;
+        // border:1px solid red;
+      }
+
     }
 
     .container{
@@ -37,6 +43,8 @@ html#inside{
       .row{
 
         article.priority{
+          
+          
           h3{
             background-color: $secondary;
             color:white;

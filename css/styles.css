@@ -44,6 +44,18 @@ button.hamburger:focus {
   user-select: none;
   /* Standard */ }
 
+img.family {
+  transform: rotate(-0.5deg); }
+
+img.accra {
+  transform: rotate(0.5deg); }
+
+figure {
+  margin-bottom: 1.5em; }
+  figure figcaption {
+    font-style: italic;
+    color: gray; }
+
 @font-face {
   font-family: 'eastmangrotesque-extrabold';
   src: url("../fonts/eastmangrotesque-extrabold-webfont.woff2") format("woff2"), url("../fonts/eastmangrotesque-extrabold-webfont.woff") format("woff");
@@ -1000,6 +1012,8 @@ h2.pull-quote {
           display: none; } }
 html#inside #main article {
   margin-top: 2em; }
+  html#inside #main article h2 {
+    margin-bottom: 1em; }
 html#inside #main .container .row.priorities-intro {
   margin: 3em auto 1.2em auto; }
   html#inside #main .container .row.priorities-intro .col-md p,

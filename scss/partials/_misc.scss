@@ -53,3 +53,21 @@ button.hamburger:focus {
 -ms-user-select: none; /* IE10+/Edge */
 user-select: none; /* Standard */
 }
+
+img.family{
+  transform: rotate(-.5deg);
+}
+
+img.accra{
+  transform: rotate(.5deg);
+}
+
+figure{
+
+  margin-bottom:1.5em;
+
+  figcaption{
+    font-style: italic;
+    color:gray;
+  }
+}
