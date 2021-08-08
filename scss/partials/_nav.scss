@@ -1,11 +1,36 @@
 // _footer.scss
 
+.add_red_border{
+    border:2px solid red !important;
+}
+
 .menu_visible{
     display: block !important;
 }
 
+.submenu_open{
+    @media (min-width: $display) { 
+        display: block !important;
+    } 
+}
+
+.submenu_close{
+    @media (min-width: $display) { 
+        display: none;
+    }
+}
+
+// .submenu_invsible{
+//     display:none !important;
+// }
+
 .menu_header_collapsed{
     top: $header_height_collapsed !important;
+
+    @media (min-width: $display) { 
+        top:0 !important;
+    }
+
 }
 
 @keyframes slidein {
@@ -42,13 +67,14 @@
 #nav-holder{
     /* Hide scrollbar for IE, Edge and Firefox */
     display:none;
+    //background-color: $secondary;
     //border:5px solid yellow;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     position: absolute;
     //pointer-events: none;
     z-index: 6000;
-    height:1000px;
+    height:$mobile_menu_height;
     width:100%;
     top: $header_height_full;
     overflow-x: hidden;
@@ -66,9 +92,8 @@
         //top: $header_height_full;
         background-color: $secondary;
         font-family: 'eastmangrotesque-extrabold';
-        height:1200px;
+        height: $mobile_menu_height;
         text-align: left;
-        //border:4px solid red;
     
 
         ul{
@@ -76,21 +101,14 @@
             list-style-type: none;
             text-transform: uppercase;
             padding-left:0;
-        // border:1px solid red;
 
             li{
 
-                // text-align: center;
                 line-height: 2em;
-                //border-top:1px solid lighten($secondary, 20%);
                 padding:0;
-                //border:1px solid red;
-                //margin-top:.8em;
                 border-top:1px solid rgba(255,255,255,.25);
-                //border:1px solid red;
 
                 &:first-child{
-                    //border-top:0;
                     margin-top: 0;;
                 }
 
@@ -129,7 +147,6 @@
                 ul.submenu{
                     li{
                         line-height: 1.32em;
-                        //border:1px solid red;
                         margin-top:0;
                         border:0;
 
@@ -139,7 +156,6 @@
                         }
 
                         a{
-                            //background-color: darken($secondary, 4%);
                             padding-left:2.5em;
                             font-family: $body;
                             text-transform: capitalize;
@@ -147,7 +163,18 @@
 
                         
                     }
+
+                    li.endorsements{
+                        display:none;
+                    }
+
                 }
+
+
+            }//end li
+
+            li.media{
+                display:none !important;
             }
 
         }//end ul
@@ -168,6 +195,41 @@
             }
         }
 
+        .languages{
+            display:none;
+            margin-top:3em;
+            ul{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                font-family: $body;
+                li{
+                    border-top:none;
+                    a{
+                        &:link, &:visited{
+                            background-color: $secondary;
+                        }
+
+                        &:hover, &:active{
+                            background-color: $secondary;
+                        }
+                    }
+
+                    a.english::before{
+                        content: url(../images/flag-en.png);
+                        padding-right:6px;
+                        top:10px;
+                    }
+
+                    a.espanol::before{
+                        content: url(../images/flag-es.png);
+                        padding-right:6px;
+                        top:10px;
+                    }
+                }
+            }
+        }
+
     }//end nav.menu
 }//end #nav-holder
 
@@ -175,6 +237,7 @@
 
 @media (min-width: $tablet) { 
 
+#nav-holder{
 	nav.menu{  //the nav is placed just inside the 'main' div below the header
         //display: none;
         z-index:2000;
@@ -218,51 +281,207 @@
     
     }//end nav.menu
 
+}//end #navHolder
+
 }//end tablet breakpoint ---------------
 
 
-@media (min-width: $display) { 
+@media (min-width: $display) { //---------DISPLAY------------------------------
+
+header{
+
+    position: auto;
+    justify-content: space-between !important;
+
+#nav-holder{
+
+    display: inline-block;
+    position: relative;
+    //border:3px solid red;
+    padding-right:1em;
+    width:60%;
+    height:700px;
+    top:0;
+    pointer-events:none;
 
 	nav.menu{  //the nav is placed just inside the 'main' div below the header
-        //display: none;
-        z-index:2000;
-       // height:100%;
-        position: absolute;
-        width:30%;
-        //right:0;
-       // top:0;
-        background-color: $secondary;
-        font-family: 'eastmangrotesque-extrabold';
-        box-shadow: -3px 2px 2px 1px rgba(0, 0, 0, 0.4);
+        //border:2px solid orange;
+        display: flex;
+        height:100%;
+        position: auto;
+        width:100%;
+        background-color: rgba(255,255,255,0);
+        font-family: $body;
+        box-shadow: none;
+        justify-content: flex-end;
+        align-items: center;
+        //border:2px dotted yellow;
+        padding-right:2em;
+        opacity:1;
     
         ul{
             
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-end;
             list-style-type: none;
             text-transform: uppercase;
             padding-left:0;
-    
+            margin-bottom:0;
+           // border:2px dotted yellow;
+            position:absolute;
+            text-align: center;
+            pointer-events:auto;
+
             li{
-    
-                text-align: center;
+
+                width:175px;
                 line-height: 2em;
-                border-top:1px solid lighten($secondary, 20%);
-                //padding: 1em 0;
-    
+                // padding:0;
+                //padding-bottom:2em;
+                border-top:0;
+                display: flex;
+                flex-flow: column wrap;
+                //border:1px solid yellow;
+                
+                //padding-bottom:1em;
+
                 &:first-child{
-                    border-top:0;
+                    margin-top: 0;;
                 }
-    
+
                 a{
                     font-size: 1.1em;
                     color:white;
                     text-decoration: none;
+                    padding: auto;
+                    display:block;
+                    padding-left:0;
+                    padding:.25em .75em .35em .75em;
+                    text-align: center;
+                    width:100%;
+                    //border:1px solid red;
+
+                    &:hover{
+                        background-color: rgba(255,255,255,0);
+                        text-decoration: underline;
+                    }
+
+                    &:active{
+                        background-color: rgba(255,255,255,0);
+                    }
                     
                 }
+
+                a.donate{
+                    background-color: #339c44;
+                    border-radius: 3px;
+                    //width:175px;
+                    width:100%;
+
+                    &:hover{
+                        background-color: #40ab51;
+                        text-decoration: none;;
+                    }
+
+                    &:active{
+                        background-color: #268836;
+                        text-decoration: none;
+                    }
+
+                }
+
+                ul.submenu{
+
+                    //display:flex;    
+                    display: none;
+                    //border:1px solid red;
+                    width:175px;
+                    flex-flow: column wrap;
+                    //position: relative;
+                    position: auto;
+                    top:50px;
+                    align-items: center;
+                    text-align: center;
+
+                    li{
+                        line-height: 1.32em;
+                       // border:1px solid red;
+                        margin-top:0;
+                        //border:1px dashed black;
+                        text-align: center;
+                        width:175px;
+
+
+
+                        &:first-child{
+                            margin-top:-.5em;
+                        }
+
+                        a{
+                            background-color: darken($secondary, 4%);
+                            padding:0;
+                            padding:1em;
+                            font-family: $body;
+                            text-transform: capitalize;
+                            border-bottom:1px solid lighten($secondary, 5%);
+                            //width:175px;
+                            width:100%;
+
+                            &:hover{
+                                background-color: lighten($secondary, 10%);
+                                text-decoration: none;
+                                opacity:1;
+                            }
+        
+                            &:active{
+                                background-color: darken($secondary, 10%);
+                                opacity:1;
+                            }
+
+                        }
+
+                        
+                    }
+                }
             }
-    
+
+            li.home{
+                display:none;
+            }
+
+            li.donate{
+                width: 120px;
+                //margin-left: 2em;
+            }
+
         }//end ul
+
+        .social-media-links{
+            
+            //border:4px solid red;
+            text-align: center;
+            display:none;
+
+            a{
+
+                img{ 
+                    max-width: 50px;
+                    height:auto;
+                    margin: 1em .75em 0 .75em;
+                }
+            
+            }
+        }
+
+        .languages{
+            display: none;
+        }
     
     }//end nav.menu
+
+}//end #nav-holder  
+}//end header 
 
 }//end display breakpoint
 

@@ -40,6 +40,7 @@ html.home{
 
 	.hero{
 		
+		//display:none;
 		position: relative;
 		text-align: center;
 	    background-attachment: scroll;
@@ -151,6 +152,7 @@ html.home{
 
 	.grabber{
 		//border:2px dotted red;
+		//display:none;
 		text-align: center;
 		padding-bottom:2em;
 		h2{
@@ -222,6 +224,7 @@ html.home{
 		margin-bottom:2em;
 		//border-top:3px solid $secondary;
 		border-bottom:3px solid $secondary;
+		
 		
 
 	.parallax{

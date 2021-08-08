@@ -2,10 +2,27 @@
 
 
 //DEFAULT/MOBILE SIZES-----------------------------------------------
-#main .hero { 
+#main .hero.homepage { 
 	background-image: url('../images/hero_01_MOBILE.jpg'); 
 	height:300px;
 }
+
+#main .hero.meet { 
+	background-image: url('../images/meetRobbyn_MOBILE.jpg'); 
+	height:300px;
+}
+
+#main .hero.story { 
+	background-image: url('../images/robbynStory_MOBILE.jpg'); 
+	height:300px;
+}
+
+#main .hero.priorities { 
+	background-image: url('../images/priorities_MOBILE.jpg'); 
+	height:300px;
+}
+
+
 
 .parallax_01{
 	background-image: url('../images/curtisBay_MOBILE_duoTone.jpg');
@@ -29,9 +46,27 @@
 @media (min-width: $tablet) { 
 	
 	//MAIN HERO
-	#main .hero { 
+	#main .hero.homepage { 
 		background-image: url('../images/hero_01_TABLET.jpg'); 
 		height:350px;
+	}
+
+	#main .hero.meet { 
+	background-image: url('../images/meetRobbyn_TABLET.jpg'); 
+	height:400px;
+
+
+}
+
+
+#main .hero.priorities { 
+	background-image: url('../images/priorities_TABLET.jpg'); 
+	height:400px !important;
+}
+
+	#main .hero.story { 
+		background-image: url('../images/robbynStory_TABLET.jpg'); 
+		height:400px;
 	}
 
 // 	.parallax_01{
@@ -56,9 +91,24 @@
 //DISPLAY SIZES-----------------------------------------------
 @media (min-width: $display) { 
 	
-	#main .hero { 
+	#main .hero.homepage { 
 		background-image: url('../images/hero_01_DISPLAY.jpg'); 
 		height:700px !important;
+	}
+
+	#main .hero.meet { 
+		background-image: url('../images/meetRobbyn_DISPLAY.jpg'); 
+		height:400px;
+	}
+
+	#main .hero.priorities { 
+		background-image: url('../images/priorities_DISPLAY.jpg'); 
+		height:600px !important;
+	}
+
+	#main .hero.story { 
+		background-image: url('../images/robbynStory_DISPLAY.jpg'); 
+		height:600px !important;
 	}
 
 	.parallax_01{

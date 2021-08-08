@@ -14,6 +14,7 @@
 function initialize(){
 	//console.log('initialize()');
 
+	const main = document.querySelector('#main'); //main is the content, not the entire document
 	const header_height = 90;
 	const header = document.querySelector('header');
 	const menu_icon = document.querySelector('.menu-icon');
@@ -26,8 +27,100 @@ function initialize(){
 	let isMenuOpen = false;
 	let number_scrolls = 0;
 
-	const main = document.querySelector('#main');
+	
 	const allSections = main.querySelectorAll('section');
+	const allNavItems = document.querySelectorAll('nav.menu > ul > li');
+	const allSubMenus = document.querySelectorAll('nav.menu > ul > li > ul.submenu');
+
+	
+	
+	
+	//ACTIVATE SUBMENU FUNCTIONALITY
+	allNavItems.forEach(activateSubmenu);
+
+	//activate the submenu on an individual top-level nav item
+	function activateSubmenu(item){
+		
+		const submenu = item.querySelector('ul.submenu');
+		
+		//if the item HAS a submenu...
+		if(submenu != null){
+
+			//the item is the top-level nav item
+			//listen to see if the mouse leaves the top-level nav item
+			item.addEventListener('mouseenter', showSubmenu );
+			item.addEventListener('mouseleave', closeSubmenu ); 
+		}	
+	
+	}
+
+	 
+	function showSubmenu(e){
+
+		//console.log("showSubmenu()");
+
+		//allSubMenus.forEach(closeSubmenu);
+
+		const navItem = e.currentTarget;
+		const submenu = navItem.querySelector('ul.submenu');
+
+
+
+		submenu.classList.add('submenu_open');
+
+			//submenu.target.classList.add('submenu_visible');
+
+	}
+
+
+
+	function closeSubmenu(e){
+
+		//console.log("closeSubmenu()");
+
+		const navItem = e.currentTarget;
+		const submenu = navItem.querySelector('ul.submenu');
+
+
+		//remove any extra submenu_close classes, if they exist
+		if(submenu.classList.contains('submenu_close')){
+			submenu.classList.remove('submenu_close');
+		}
+
+		//check if the submenu is open, then close it
+		if(submenu.classList.contains('submenu_open')){
+			submenu.classList.remove('submenu_open');
+			submenu.classList.add('submenu_close');
+		}
+
+	}
+
+	function closeAllSubmenus(){
+
+		allSubMenus.forEach(autoClose);
+
+	}//end closeAllSubmenus()
+
+
+	function autoClose(item){
+		
+		//console.log('autoClose');
+		//item.classList.add('add_red_border');
+
+		//remove any extra submenu_close classes, if they exist
+		if(item.classList.contains('submenu_close')){
+			item.classList.remove('submenu_close');
+		}
+
+		//check if the submenu is open, then close it
+		if(item.classList.contains('submenu_open')){
+			item.classList.remove('submenu_open');
+			item.classList.add('submenu_close');
+		}
+
+
+	}//end autoClose
+
 
 
 
@@ -35,6 +128,7 @@ function initialize(){
 
 	function onWindowResize(){
 		closeMenu();
+		closeAllSubmenus(); //display-only; this probably isn't needed anymore
 	}
 
 	nav.addEventListener('click', function(){
@@ -75,6 +169,8 @@ function initialize(){
 			}
 		}
 
+		//}//end if(window.innerWidth < 1200){
+
 
 
 	});
@@ -96,7 +192,7 @@ function initialize(){
 
 
 	function openMenu(){
-			console.log("open menu");
+			//console.log("open menu");
 			navHolder.classList.add('menu_visible');
 			nav.classList.add('menu_visible');
 			hamburger.classList.add('is-active');
@@ -111,7 +207,7 @@ function initialize(){
 	}
 
 	function closeMenu(){
-			console.log("close menu");
+			//console.log("close menu");
 			hamburger.classList.remove('is-active');
 			//nav.classList.remove('menu_visible');
 			
@@ -151,7 +247,10 @@ function initialize(){
 	}
 
 
+
 	
+	
+
 
 
 

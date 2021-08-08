@@ -1,29 +1,57 @@
 //_header.scss
+.eyebrow{ //sits just above main header, visible only at display sizes
+	display:none;
+}//end eyebrow
+
+
 
 header{
 	background-color: $primary;
 	text-align: center;
-	//border-bottom:3px solid $secondary;
 	position: relative;
+	//position: fixed;
 	height: $header_height_full;
-	//border:4px solid green;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
+
+
 	a{
 
-		//border:1px dotted red;
-		//display: inline-block;
 		width:160px;
-		// max-width: 160px;
-		//height: auto;
 
 		.logo{
 			max-width: 160px;
 			height:auto;
-			display: block;;
+			display: block;
 		}
+
+		// .logo-collapsed{
+		// 	display:none;
+		// }
+
+		// .logo-homepage{
+		// 	display:none;
+		// }
+
+		&:link, &:visited{
+			opacity: 1;
+		}
+
+		&:hover{
+			opacity: .8;
+		}
+
+		&:active{
+			opacity: .65;
+		}
+
+	}
+
+	a.logo-collapsed,
+	a.logo-homepage{
+		display:none;
 	}
 
 	.menu-icon-holder{
@@ -36,7 +64,6 @@ header{
 			top:0;
 			z-index: 1000;
 			display: flex;
-			// justify-content: flex-end;
 			justify-content: center;
 			align-items: center;
 			padding-right:1em;
@@ -68,30 +95,219 @@ header.collapsed{
 		}
 	}
 
+	@media (min-width: $display) { 
+		background-color: rgba(23,20,66,.9);
+		a.logo{
+
+			display: none;
+
+			.logo{
+				display: none;
+			}
+
+			
+		}
+
+		a.logo-collapsed{
+
+
+			display: block;
+
+			.logo-collapsed{
+				display:block;
+				height:42px;
+				width: auto;
+				margin-left:1em;
+			}
+		}
+
+		a.logo-homepage{
+			display:none !important;
+		}
+	}
+
 }
 
 
 /*----------- BREAKPOINTS ------------ */
-
+//TABLET----------------------------------
 @media (min-width: $tablet) { 
 
 	header{
 	background-color: $primary;
 	text-align: center;
-	//border-bottom:4px solid $secondary;
 
-	a{
+		a{
+			.logo{
+				max-width: 200px;
+				height:auto;
+				margin: .5em auto;
+			}
+		}
+
+		.menu-icon-holder{
+			justify-content: flex-end;
+		}
+
+	}//end header
+
+}//end tablet query
+
+//DISPLAY----------------------------------
+@media (min-width: $display) { 
+
+	.eyebrow{
+		// $eyebrow-height: 30px;
+		display: flex;
+		background-color: $secondary;
+		height:130px;
+	
+		flex-flow: row wrap;
+		justify-content: flex-end;
+
+		.languages{
+			//display: flex;
+			display:none;
+			flex-flow: row wrap;
+			align-items: center;
+			height:30px;
+			margin-right: 1em;;
+
+			a{
+				&:link, &:visited{
+					color:white;
+					text-decoration: none;
+				}
+
+				&:hover, &:active{
+					color:white;
+					text-decoration: underline;
+				}
+			
+			}
+
+			a.english{
+				margin-right:1em;
+			}
+
+			a.english::before{
+				content: url(../images/flag-en.png);
+				padding-right:4px;
+				top:10px;
+				//margin-top:2px;
+				// height:24px;
+				// width: 24px;
+			}
+
+			a.espanol{
+				margin-right:1em;
+				
+			}
+
+			a.espanol::before{
+				content: url(../images/flag-es.png);
+				padding-right:4px;
+				top:10px;
+				//margin-top:2px;
+				// height:24px;
+				// width: 24px;
+			}
+
+		}
+	
+		.social-media-icons{
+			display: flex;
+			flex-flow: row wrap;
+	
+	
+			a{
+				img.social-media-logo{
+					width:26px;
+					height:auto;
+					margin-right:10px;
+					opacity: .85;
+				}
+
+				&:link, &:visited{
+					opacity: .85;
+				}
+
+				&:hover{
+					opacity: 1;
+				}
+
+				&:active{
+					opacity: .6;
+				}
+
+			}
+	
+		}
+	}//end eyebrow
+	
+
+header{
+
+	//top:$eyebrow_height;
+	top:30px;
+	//border:2px solid red;
+	height:100px;
+	position: fixed;
+	z-index: 6000;
+	width:100%;
+
+	a.logo{
+
+		//visibility: hidden;
+		width:160px;
+		margin-left:1em;
+
 		.logo{
-			max-width: 200px;
-			height:auto;
-			margin: .5em auto;
+			//display:none;
+			
 		}
 	}
 
+
+
 	.menu-icon-holder{
-		justify-content: flex-end;
+		//border:1px solid red;
+		display:none;
 	}
 
+}//end header
+
+//only show the 'main' campaign logo at the top of the homepage, on the full display site
+html#home{
+	header{
+
+		a.logo{
+
+			visibility: hidden;
+			
+	
+			.logo{
+				//display:none;
+				
+			}
+		}
+	
+		a.logo-homepage{
+			display:block;
+			width:286px;
+			height: auto;
+			position: absolute;
+			left:1em;
+			top:-1em;
+			box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	
+			&:link, &:visited, &:hover, &:active{
+				opacity: 1;
+			}
+
+		}
+
+	}//end header
 }
 
-}
+}//end display query
