@@ -71,6 +71,27 @@ html#inside{
     
     }//end container
 
+    section.callouts{
+
+      // border:2px solid red;
+  
+      .priorities{
+        // border:2px solid red;
+        background-image: url("../images/priorities_callout.jpg");
+      }
+
+      .story{
+        background-image: url("../images/story_callout.jpg");
+      }
+  
+      .donate{
+        background-image: url("../images/placeholder2.jpg");
+      }
+  
+  
+  }
+
+
 
   }//end main
 

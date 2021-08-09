@@ -1031,5 +1031,11 @@ html#inside #main .container .row article.priority h3 {
 html#inside #main .container .row article.priority p.emph {
   color: #337dc0;
   font-weight: bold; }
+html#inside #main section.callouts .priorities {
+  background-image: url("../images/priorities_callout.jpg"); }
+html#inside #main section.callouts .story {
+  background-image: url("../images/story_callout.jpg"); }
+html#inside #main section.callouts .donate {
+  background-image: url("../images/placeholder2.jpg"); }
 
 /*# sourceMappingURL=styles.css.map */
