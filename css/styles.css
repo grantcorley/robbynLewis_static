@@ -499,7 +499,8 @@ section.callouts .callout {
       border: 1px solid white;
       display: inline-block;
       padding: .36em .85em;
-      border-radius: 5px; }
+      border-radius: 5px;
+      margin-bottom: 0; }
       section.callouts .callout .block h3:hover {
         background-color: #408dd1; }
       section.callouts .callout .block h3:active {
@@ -622,7 +623,8 @@ h2.pull-quote {
           border: 1px solid white;
           display: inline-block;
           padding: .36em .85em;
-          border-radius: 5px; }
+          border-radius: 5px;
+          margin-bottom: 0; }
           #main section.callouts .callout .block h3:hover {
             background-color: #408dd1; }
           #main section.callouts .callout .block h3:active {
@@ -694,7 +696,7 @@ h2.pull-quote {
   #main section.callouts {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center; }
+    justify-content: space-evenly; }
     #main section.callouts .callout {
       display: flex;
       background-position: top;
@@ -728,11 +730,9 @@ h2.pull-quote {
           #main section.callouts .callout .block h3:active {
             background-color: #2a72b1; }
     #main section.callouts .meet-robbyn {
-      background-image: url("../images/placeholder.jpg");
-      margin-right: 1em; }
+      background-image: url("../images/placeholder.jpg"); }
     #main section.callouts .donate {
-      background-image: url("../images/placeholder2.jpg");
-      margin-left: 1em; }
+      background-image: url("../images/placeholder2.jpg"); }
   #main .section-divider {
     margin-bottom: 3em; } }
 .add_red_border {
