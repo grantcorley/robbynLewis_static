@@ -47,8 +47,8 @@ button.hamburger:focus {
 img.family {
   transform: rotate(-0.5deg); }
 
-img.accra {
-  transform: rotate(0.5deg); }
+img.peaceCorps {
+  transform: rotate(2deg); }
 
 figure {
   margin-bottom: 1.5em; }
@@ -270,7 +270,7 @@ footer {
       opacity: 1; }
 
 #main .hero.homepage {
-  background-image: url("../images/hero_01_MOBILE.jpg");
+  background-image: url("../images/houseFloor_MOBILE.jpg");
   height: 300px; }
 
 #main .hero.meet {
@@ -296,7 +296,7 @@ footer {
 
 @media (min-width: 768px) {
   #main .hero.homepage {
-    background-image: url("../images/hero_01_TABLET.jpg");
+    background-image: url("../images/houseFloor_TABLET.jpg");
     height: 350px; }
 
   #main .hero.meet {
@@ -312,7 +312,7 @@ footer {
     height: 400px; } }
 @media (min-width: 1200px) {
   #main .hero.homepage {
-    background-image: url("../images/hero_01_DISPLAY.jpg");
+    background-image: url("../images/houseFloor_DISPLAY.jpg");
     height: 700px !important; }
 
   #main .hero.meet {
@@ -369,7 +369,7 @@ html.home article {
     margin-bottom: 1em; }
     #main .hero .lockup {
       position: absolute;
-      bottom: 5%;
+      bottom: 3%;
       left: 0;
       width: 100%; }
       @media (min-width: 768px) {
@@ -416,6 +416,15 @@ html.home article {
           background-color: #38af4b; }
         #main .hero .lockup .buttons a.button.donate:active {
           background-color: #2c893b; }
+      #main .hero .lockup p.photo-credit {
+        text-align: right;
+        color: white;
+        padding-right: 3em;
+        padding-top: .5em;
+        font-size: .6em;
+        opacity: .5;
+        /* display: none; */
+        margin-bottom: 0; }
   #main .grabber {
     text-align: center;
     padding-bottom: 2em; }
@@ -540,7 +549,7 @@ h2.pull-quote {
 /*------------------- ============= BREAKPOINTS =============== ------------ */
 @media (min-width: 768px) {
   #main .hero .lockup {
-    bottom: 30px; }
+    bottom: 20px; }
     #main .hero .lockup h2 {
       font-size: 3.6em;
       margin-bottom: .25em; }
@@ -631,7 +640,7 @@ h2.pull-quote {
             background-color: #2a72b1; } }
 @media (min-width: 1200px) {
   #main .hero .lockup {
-    bottom: 36px; }
+    bottom: 28px; }
     #main .hero .lockup h2 {
       font-size: 6em; }
     #main .hero .lockup .buttons {

@@ -3,7 +3,8 @@
 
 //DEFAULT/MOBILE SIZES-----------------------------------------------
 #main .hero.homepage { 
-	background-image: url('../images/hero_01_MOBILE.jpg'); 
+	//background-image: url('../images/hero_01_MOBILE.jpg'); 
+	background-image: url('../images/houseFloor_MOBILE.jpg'); 
 	height:300px;
 }
 
@@ -47,7 +48,8 @@
 	
 	//MAIN HERO
 	#main .hero.homepage { 
-		background-image: url('../images/hero_01_TABLET.jpg'); 
+		//background-image: url('../images/hero_01_TABLET.jpg'); 
+		background-image: url('../images/houseFloor_TABLET.jpg'); 
 		height:350px;
 	}
 
@@ -92,7 +94,8 @@
 @media (min-width: $display) { 
 	
 	#main .hero.homepage { 
-		background-image: url('../images/hero_01_DISPLAY.jpg'); 
+		// background-image: url('../images/hero_01_DISPLAY.jpg'); 
+		background-image: url('../images/houseFloor_DISPLAY.jpg'); 
 		height:700px !important;
 	}
 

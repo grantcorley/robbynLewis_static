@@ -54,7 +54,7 @@ html.home{
 	    .lockup{
 
 	    		position: absolute;
-			    	bottom: 5%;
+			    	bottom: 3%;
 			    	left:0;
 			    	// border:1px solid red;
 			    	width:100%;
@@ -142,6 +142,17 @@ html.home{
 					}
 
 				}//end buttons
+
+				p.photo-credit{
+					text-align: right;
+					color: white;
+					padding-right: 3em;
+					padding-top: .5em;
+					font-size: .6em;
+					opacity: .5;
+					/* display: none; */
+					margin-bottom: 0;
+				}
 
 
 		}//end lockup
@@ -415,7 +426,7 @@ h2.pull-quote{
 
 			.lockup{
 
-				bottom:30px;
+				bottom:20px;
 
 			h2{
 				font-size:3.6em;
@@ -610,7 +621,7 @@ section.callouts{
 
 		.lockup{
 
-			bottom:36px;
+			bottom:28px;
 
 			h2{
 				font-size:6em;
@@ -750,7 +761,6 @@ section.callouts{
 	//border:2px solid brown;
 	display: flex;
 	flex-flow: row wrap;
-	//justify-content: center;
 	justify-content: space-evenly;
 
 
